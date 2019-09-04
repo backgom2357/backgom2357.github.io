@@ -16,7 +16,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">DOMINO</a>
+					<a href="{{ site.baseurl }}/index.html" class="logo">DOMINO</a>
 					<nav id="nav">
 						{% for item in site.data.navigation %}
 							<a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>
