@@ -26,4 +26,4 @@ person = Human( "사람", "오른손" )
 
 
 
-출처 : 프로그래머스[프로그래머스](https://programmers.co.kr/learn/courses/2/lessons/330)
+출처 : [프로그래머스](https://programmers.co.kr/learn/courses/2/lessons/330)
