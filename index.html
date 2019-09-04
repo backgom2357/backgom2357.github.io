@@ -1,3 +1,6 @@
+---
+title: DearMinor
+---
 <!DOCTYPE HTML>
 <!--
 	Theory by TEMPLATED
@@ -6,7 +9,7 @@
 -->
 <html>
 	<head>
-		<title>Theory by TEMPLATED</title>
+		<title>Dearminor</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,11 +19,13 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Theory</a>
+					<a href="index.html" class="logo">DOMINO</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Generic</a>
-						<a href="elements.html">Elements</a>
+						{% for item in site.data.navigation %}
+							<a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>
+	             {{ item.name }}
+	            </a>
+						{% endfor %}
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -28,41 +33,30 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<h1>Welcome to Theory</h1>
-				<p>A free responsive HTML5 website template by TEMPLATED.</p>
+				<h1>Dear Minor Repository</h1>
+				<p>List of Useless words, but looks cool</p>
 			</section>
 
 		<!-- One -->
 			<section id="one" class="wrapper">
 				<div class="inner">
+					<header class="align-center">
+						<h2>Recent Post</h2>
+						<p>최근글<p>
+					</header>
 					<div class="flex flex-3">
+						{% for post in site.posts limit:3 %}
 						<article>
 							<header>
-								<h3>Magna tempus sed amet<br /> aliquam veroeros</h3>
+								<h3>{{ post.title }}</h3>
+								<p> {{ post.date | date_to_string }} </p>
 							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
+							<p>{{ post.excerpt | strip_html | truncatewords: 30}}</p>
 							<footer>
-								<a href="#" class="button special">More</a>
+								<a href="{{ post.url | prepend: site.baseurl }}" class="button special">More</a>
 							</footer>
 						</article>
-						<article>
-							<header>
-								<h3>Interdum lorem pulvinar<br /> adipiscing vitae</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-						<article>
-							<header>
-								<h3>Libero purus magna sapien<br /> sed ullamcorper</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
+						{% endfor %}
 					</div>
 				</div>
 			</section>

@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Machine Learning
+  link: /ML.html
+- name: Programming
+  link: /programming.html
+- name: Blog
+  link: /blog.html

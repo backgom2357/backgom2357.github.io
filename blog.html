@@ -1,0 +1,22 @@
+---
+layout: default
+title: blog
+---
+<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Blog</h2>
+				<p>ㅂㅡ로ㄱㅡ</p>
+			</header>
+
+		<!-- Post List -->
+		  {% for post in site.categories.blog %}
+				<hr class="major" />
+				<a href="{{ post.url | prepend: site.baseurl }}">
+				  <h2 id='content'>{{ post.title }}</h2>
+				</a>
+				<p> {{ post.excerpt | strip_html | truncatewords: 50 }} </p>
+			{% endfor %}
+		 </div>
+  </section>
