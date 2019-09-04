@@ -10,7 +10,8 @@ categories: programming
 - 자식 클래스에서 부모클래스의 내용을 사용하고 싶은 경우
 - 사용 방법 : super().부모클래스내용
 - 예
-~~~
+
+```python
 class Animal( ):
     def __init__( self, name ):
         self.name = name
@@ -21,7 +22,7 @@ class Human( Animal ):
         self.hand = hand
 
 person = Human( "사람", "오른손" )
-~~~
+```
 
 
 
