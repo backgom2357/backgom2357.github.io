@@ -36,7 +36,6 @@ print(person2.name, person2.hand, person2.walk, person2.fly)    # 사람 오른�
 person1.run()   # DADADADADADA
 person2.run()   # error
 ```
-<br>
 
 person2는 못달린다.
 <br>
@@ -66,7 +65,6 @@ person1 = Human1( "사람", "오른손" )
 print(person1.age)  # 10
 print(person1.walk, person1.fly)  # error
 ```
-<br>
 
 상속을 통해서는 클래스의 메서드와 클래스 내에서 생성된 변수만 받아올 수 있다.
 <br><br>
