@@ -40,3 +40,5 @@ BFS(G, s)
 <br>
 
 이걸 잘 응용해서 쓰면 될거 같다
+
+_참조 : Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein-Introduction to algorithms-The MIT Press (2001_
