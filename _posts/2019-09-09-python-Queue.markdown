@@ -43,7 +43,6 @@ NxN 크기의 미로에서 출발지 목적지가 주어진다.
 10101<br>
 10101<br>
 10021<br>
-
 마지막 줄의 2에서 출발해서 0인 통로를 따라 이동하면 맨 윗줄의 3에 5개의 칸을 지나 도착할 수 있다.
 <br>
 
@@ -119,6 +118,7 @@ for case in range(1, T + 1):
             n = line_of_maze[idx]
             if n == 2:
                 y, x = i, idx
+                find_start = True
                 break
             idx += 1
 
