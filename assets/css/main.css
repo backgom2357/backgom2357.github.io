@@ -1634,11 +1634,11 @@
 
 	a {
 		color: #5385c1;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 
 	strong, b {
@@ -3064,4 +3064,9 @@
 			text-align: center;
 		}
 
+	}
+
+	.image-center {
+	  display: block;
+	  margin: auto;
 	}
