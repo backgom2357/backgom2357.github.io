@@ -10,7 +10,7 @@ categories: programming
 하지만 구글 원격이라는 것이 있었음.
 <br>
 
-![AutoClicker](/images/AutoClicker.png)
+![AutoClicker](/images/AutoClicker.png){: width="60%" height="auto" .image-center}
 <br>
 
 ```python
