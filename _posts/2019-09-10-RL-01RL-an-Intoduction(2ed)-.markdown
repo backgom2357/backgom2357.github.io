@@ -6,6 +6,8 @@ categories: machine_learning
 ---
 # Reinforcement Learning an Introduction - Richard S. Sutton (Highlight 01)
 
+# Chapter 1. Introduction
+
 # 1.1 Reinforcement Learning
 Reinforcement learning is learning what to do - how to map situations to actions - so as to maximize a numerical reward signal.
 <br>
