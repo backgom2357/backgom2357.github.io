@@ -1784,7 +1784,7 @@
 		}
 
 	section.wrapper, article.wrapper {
-		padding: 6em 0;
+		padding: 3em 0;
 	}
 
 		section.wrapper header, article.wrapper header {
@@ -1925,7 +1925,7 @@
 			}
 
 		.flex.flex-4 .box {
-			width: 21%;
+			width: 30%;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -1964,7 +1964,7 @@
 					}
 
 			.flex.flex-4 .box {
-				width: 47%;
+				width: 100%;
 			}
 
 		}
@@ -2180,7 +2180,7 @@
 
 	.box {
 		border: solid 1px #dbdbdb;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 		padding: 1.5em;
 	}
 
@@ -2210,7 +2210,8 @@
 			}
 
 				.box.person .image img {
-					max-width: 100%;
+					margin:auto;
+					max-width: 80%;
 				}
 
 /* Icon */
@@ -2244,6 +2245,8 @@
 	}
 
 		.image img {
+			width: 50%;
+			height: auto;
 			border-radius: 0;
 			display: block;
 		}

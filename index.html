@@ -19,7 +19,7 @@ title: DearMinor
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="{{ site.baseurl }}/index.html" class="logo">DOMINO</a>
+					<a href="{{ site.data.navigation[0].link }}" class="logo">DOMINO</a>
 					<nav id="nav">
 						{% for item in site.data.navigation %}
 							<a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>
@@ -41,11 +41,13 @@ title: DearMinor
 			<section id="one" class="wrapper">
 				<div class="inner">
 					<header class="align-center">
-						<h2>Recent Post</h2>
-						<p>최근글<p>
+						<p>
+							Recent Programming Post<br>
+							최근 프로그래밍 글
+						</p>
 					</header>
 					<div class="flex flex-3">
-						{% for post in site.posts limit:3 %}
+						{% for post in site.categories.programming limit:3 %}
 						<article>
 							<header>
 								<h3>{{ post.title }}</h3>
@@ -65,77 +67,56 @@ title: DearMinor
 			<section id="two" class="wrapper style1 special">
 				<div class="inner">
 					<header>
-						<h2>Ipsum Feugiat</h2>
-						<p>Semper suscipit posuere apede</p>
+						<p>
+							Recent M.L. Post<br>
+							최근 머신러닝 글
+						</p>
 					</header>
 					<div class="flex flex-4">
-						<div class="box person">
-							<div class="image round">
-								<img src="images/pic03.jpg" alt="Person 1" />
+						{% for post in site.categories.machine_learning limit:3 %}
+							<div class="box person">
+								<a href="{{ post.url | prepend: site.baseurl }}">
+									<div class="image round">
+										<img src= {{ post.image }} alt="{{ post.title }}" >
+									</div>
+									<h3>{{ post.title }}</h3>
+								</a>
+								<p>{{ post.date | date_to_string }}</p>
 							</div>
-							<h3>Magna</h3>
-							<p>Cipdum dolor</p>
-						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="images/pic04.jpg" alt="Person 2" />
-							</div>
-							<h3>Ipsum</h3>
-							<p>Vestibulum comm</p>
-						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="images/pic05.jpg" alt="Person 3" />
-							</div>
-							<h3>Tempus</h3>
-							<p>Fusce pellentes</p>
-						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="images/pic06.jpg" alt="Person 4" />
-							</div>
-							<h3>Dolore</h3>
-							<p>Praesent placer</p>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</section>
 
-		<!-- Three -->
+<!-- Three
 			<section id="three" class="wrapper special">
 				<div class="inner">
 					<header class="align-center">
-						<h2>Nunc Dignissim</h2>
-						<p>Aliquam erat volutpat nam dui </p>
+						<h2>Recent Blog</h2>
+						<p>최근 블로글</p>
 					</header>
 					<div class="flex flex-2">
-						<article>
-							<div class="image fit">
-								<img src="images/pic01.jpg" alt="Pic 01" />
-							</div>
-							<header>
-								<h3>Praesent placerat magna</h3>
-							</header>
-							<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-						<article>
-							<div class="image fit">
-								<img src="images/pic02.jpg" alt="Pic 02" />
-							</div>
-							<header>
-								<h3>Fusce pellentesque tempus</h3>
-							</header>
-							<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
+						{% for post in site.categories.blog limit:2 %}
+							<article>
+								<a href="{{ post.url | prepend: site.baseurl }}">
+								<div class="image fit">
+									<img src={{ post.image }} />
+								</div>
+								</a>
+								<header>
+									<h3>{{ post.title }}</h3>
+									<p> {{ post.date | date_to_string }} </p>
+								</header>
+								<p>{{ post.excerpt | strip_html | truncatewords: 20}}</p>
+								<footer>
+									<a href="{{ post.url | prepend: site.baseurl }}" class="button special">More</a>
+								</footer>
+							</article>
+						{% endfor %}
 					</div>
 				</div>
 			</section>
+-->
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -145,11 +126,9 @@ title: DearMinor
 							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
 						</div>
 						<ul class="icons">
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+							<li><a href="https://www.facebook.com/The.Back.I.Am" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/backgom2357/" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:backgom2357@gmail.com" class="icon fa-envelope"><span class="label">Github</span></a></li>
 						</ul>
 					</div>
 				</div>

@@ -3,6 +3,7 @@ layout: post
 title:  "Reinforcement Learning an Introduction - Richard S. Sutton (Highlight 01)"
 date:   2019-09-10
 categories: machine_learning
+image: images/RLIntroduction_Sutton.png
 ---
 # Reinforcement Learning an Introduction - Richard S. Sutton (Highlight 01)
 
