@@ -6,9 +6,9 @@ categories: machine_learning
 ---
 # Reinforcement Learning an Introduction - Richard S. Sutton (Highlight 01)
 
-# Chapter 1. Introduction
+## Chapter 1. Introduction
 
-# 1.1 Reinforcement Learning
+### 1.1 Reinforcement Learning
 Reinforcement learning is learning what to do - how to map situations to actions - so as to maximize a numerical reward signal.
 <br>
 
@@ -52,7 +52,7 @@ For learning research to make progress, important subproblems have to be isolate
 Complete, interactive, goal-seeking agent we do not always mean something like a complete organism or robot. These are clearly examples, but a complete, interactive, goal-seeking agent can also be a component of a larger behaving system. In the case the agent directly interacts with the rest of the larger system and indirectly interacts with larger system's environment.
 <br>
 
-# 1.2 examples
+### 1.2 Examples
 Examples and possible applications
 <br>
 
