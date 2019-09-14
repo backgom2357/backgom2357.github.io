@@ -1848,11 +1848,11 @@
 		@media screen and (max-width: 480px) {
 
 			section.wrapper, article.wrapper {
-				text-align: center;
+				text-align: left;
 			}
 
 				section.wrapper article, article.wrapper article {
-					text-align: center;
+					text-align: left;
 				}
 
 		}
