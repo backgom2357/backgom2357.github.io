@@ -22,7 +22,7 @@ self.head.link.link = (Node('data1').link.link) = (Node('data2').link) = Node('d
 ```
 <br>
 
-- Singly linked list(메서드 3개만 구현한 것)
+- Singly linked list(메서드 몇개만 구현한 것)
 
 ```python
 class Node:
@@ -64,16 +64,61 @@ class SinglyLinkedList:
 
         return -1
 
-    def get(self, index):
-        idx = 0
-        cur = self.head
-        if self.head == None:
-            return -1
-        while cur.link != None:
-            if idx == index:
-                return cur.data
-            cur = cur.link
-            idx += 1
+        def addContinuously(self, dataList, index):
+            idx = 0
+            cur = self.head
+            n0 = Node(dataList[0])
+            cur_in_dataList = n0
 
-        return cur.data
+            for data in dataList[1:]:
+                cur_in_dataList.link = Node(data)
+                cur_in_dataList = cur_in_dataList.link
+                self.count += 1
+
+            if index == 0:
+                cur_in_dataList.link = cur
+                self.head = n0
+                self.count += 1
+                return 0
+
+            while cur.link != None:
+                idx += 1
+                if idx == index:
+                    cur_in_dataList.link = cur.link
+                    cur.link = n0
+                    self.count += 1
+                    return 0
+                cur = cur.link
+
+            cur.link = n0
+            self.count += 1
+
+            return -1
+
+        def get(self, index):
+            idx = 0
+            cur = self.head
+            if self.head == None:
+                return -1
+            while cur.link != None:
+                if idx == index:
+                    return cur.data
+                cur = cur.link
+                idx += 1
+
+            return cur.data
+
+        def getLast10Node(self):
+            tmp = []
+
+            idx = 0
+            cur = self.head
+            while cur.link != None:
+                if idx >= self.count - 10:
+                    tmp.append(cur.data)
+                cur = cur.link
+                idx += 1
+            tmp.append(cur.data)
+
+            return tmp
 ```
