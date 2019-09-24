@@ -2,17 +2,42 @@
 layout: default
 ---
 
-		<!-- Post -->
-			<section id="three" class="wrapper">
-				<div class="inner">
-          <header class="align-center">
-            <h2>{{ page.title }}</h2>
-              <p>
-                <I>{{ page.date | date_to_string }}</I>
-              </p>
-          </header>
-          <p style="color: #0f0f0f,">
-            {{ content }}
-          </p>
-        </div>
-			</section>
+<!-- Post -->
+<section id="three" class="wrapper">
+	<div class="inner">
+    <header class="align-center">
+      <h2>{{ page.title }}</h2>
+        <p>
+          <I>{{ page.date | date_to_string }}</I>
+        </p>
+    </header>
+    <p style="color: #0f0f0f,">
+      {{ content }}
+    </p>
+  </div>
+</section>
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'] ],
+    processEscapes: true,
+  }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
