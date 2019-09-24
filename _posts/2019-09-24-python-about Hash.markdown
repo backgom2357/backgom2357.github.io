@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'python-Hash'
+title: 'python-About Hash'
 date: 2019-09-24
 categories: programming
 ---
