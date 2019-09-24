@@ -15,7 +15,7 @@ Reinforcement learning is learning what to do - how to map situations to actions
 
 Features of Reinforcement learning
 - Trial and error
-- delayed reward
+- Delayed reward
 <br>
 
 Reinforcement is a problem, a class of solution methods that work well on the problem, and the field that studies this problem and its solution methods.
