@@ -1,0 +1,7 @@
+---
+layout: post
+title: '(Highlight 00-Contents) RL an Introduction - S. Sutton'
+date: 2019-09-24
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
