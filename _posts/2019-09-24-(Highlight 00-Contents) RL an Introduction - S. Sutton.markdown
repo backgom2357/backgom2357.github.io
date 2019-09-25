@@ -78,7 +78,7 @@ image: images/RLIntroduction_Sutton.png
 #### 7 n-step Bootstrapping
 7.1 n-step TD Prediction<br>
 7.2 n-step Sarsa<br>
-7.3 n-step O↵-policy Learning<br>
+7.3 n-step Off-policy Learning<br>
 7.4 \*Per-decision Methods with Control Variates<br>
 7.5 O↵-policy Learning Without Importance Sampling: The n-step Tree Backup Algorithm<br>
 7.6 \*A Unifying Algorithm: n-step Q(σ)<br>
