@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'Highlight03 - 1.4 Limitations and Scope <br> [RL an Introduction - S. Sutton]'
+date: 2019-09-25
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+#### 1 Introduction 1
+1.1 Reinforcement Learning<br>
+1.2 Examples<br>
+1.3 Elements of Reinforcement Learning<br>
+<b>1.4 Limitations and Scope<br></b>
+1.5 An Extended Example: Tic-Tac-Toe<br>
+1.6 Summary<br>
+1.7 Early History of Reinforcement Learning<br>
+
+### 1.4 Limitations and Scope
+
+Reinforcement learning relies heavily on the concept of state -- as input to the policy and value function, and as both input to and output from the model.
+<br>
+
+Our concern in this book is not with designing the state signal, but with deciding what action to take as a function of whatever state signal is available.
+<br>
+
+Most of the reinforcement learning methods we consider in this book are structured around estimating value functions, but it is not strictly necessary to do this to solve reinforcement problems.
+<br>
+
+The policies that obtain the most reward, and random variations of them, are carried over to the next generation of policies, and the process repeats. We call these evolutionary methods because their operation is analoguous to the way biological evolution produces organisms with skilled behavior even if they do not learn during their individual lifetimes. If the space of policies is sufficiently small, or can be structured so that good policies are common or easy to find -- or if a lot of time is available for the search -- then evolutionary methods can be effective. In addition, evolutionary methods have advantages on problems in which the learning agent cannot sense the complete state of its environment.
+<br>
+
+Our focus is on reinforcement learning methods that learn while interacting with the environment, which evolutionary methods do not do.
+<br>
+
+Evolutionary methods ignore much of the useful structure of the reinforcement learning problem:
+- they do not use the fact that the policy they are searching for is a function from states to actions
+- they do not notice which states an individual passes through during its lifetime, or which actions it selects
