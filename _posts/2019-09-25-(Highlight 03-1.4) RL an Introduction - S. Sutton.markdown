@@ -5,19 +5,7 @@ date: 2019-09-25
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
 ---
-# Reinforcement Learning an Introduction - Richard S. Sutton
-
-#### 1 Introduction 1
-1.1 Reinforcement Learning<br>
-1.2 Examples<br>
-1.3 Elements of Reinforcement Learning<br>
-<b>1.4 Limitations and Scope<br></b>
-1.5 An Extended Example: Tic-Tac-Toe<br>
-1.6 Summary<br>
-1.7 Early History of Reinforcement Learning<br>
-
 ### 1.4 Limitations and Scope
-
 Reinforcement learning relies heavily on the concept of state -- as input to the policy and value function, and as both input to and output from the model.
 <br>
 
@@ -36,3 +24,17 @@ Our focus is on reinforcement learning methods that learn while interacting with
 Evolutionary methods ignore much of the useful structure of the reinforcement learning problem:
 - they do not use the fact that the policy they are searching for is a function from states to actions
 - they do not notice which states an individual passes through during its lifetime, or which actions it selects
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+#### 1 Introduction 1
+1.1 Reinforcement Learning<br>
+1.2 Examples<br>
+1.3 Elements of Reinforcement Learning<br>
+<b>1.4 Limitations and Scope<br></b>
+1.5 An Extended Example: Tic-Tac-Toe<br>
+1.6 Summary<br>
+1.7 Early History of Reinforcement Learning<br>

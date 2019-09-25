@@ -5,19 +5,7 @@ date: 2019-09-25
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
 ---
-# Reinforcement Learning an Introduction - Richard S. Sutton
-
-#### 1 Introduction 1
-1.1 Reinforcement Learning<br>
-1.2 Examples<br>
-<b>1.3 Elements of Reinforcement Learning<br></b>
-1.4 Limitations and Scope<br>
-1.5 An Extended Example: Tic-Tac-Toe<br>
-1.6 Summary<br>
-1.7 Early History of Reinforcement Learning<br>
-
 ### 1.3 Elements of Reinforcement Learning
-
 Beyond the agent and the environment, one can identify four main subelements of a reinforcement learning system:
 - a policy
 - a reward signal
@@ -56,3 +44,17 @@ Models are used for planning, by which we mean any way of deciding on a course o
 <br>
 
 Modern reinforcement learning spans the spectrum from low-level, trial-and-error learning to high-level, deliberative planning.
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+#### 1 Introduction 1
+1.1 Reinforcement Learning<br>
+1.2 Examples<br>
+<b>1.3 Elements of Reinforcement Learning<br></b>
+1.4 Limitations and Scope<br>
+1.5 An Extended Example: Tic-Tac-Toe<br>
+1.6 Summary<br>
+1.7 Early History of Reinforcement Learning<br>

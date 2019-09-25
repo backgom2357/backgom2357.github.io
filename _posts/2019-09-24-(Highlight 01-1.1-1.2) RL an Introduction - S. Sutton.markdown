@@ -5,19 +5,7 @@ date:   2019-09-24
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
 ---
-# Reinforcement Learning an Introduction - Richard S. Sutton
-
-#### 1 Introduction 1
-<b>1.1 Reinforcement Learning<br>
-1.2 Examples<br></b>
-1.3 Elements of Reinforcement Learning<br>
-1.4 Limitations and Scope<br>
-1.5 An Extended Example: Tic-Tac-Toe<br>
-1.6 Summary<br>
-1.7 Early History of Reinforcement Learning<br>
-
 ## Chapter 1. Introduction
-
 ### 1.1 Reinforcement Learning
 Reinforcement learning is learning what to do - how to map situations to actions - so as to maximize a numerical reward signal.
 <br>
@@ -83,3 +71,17 @@ At the same time, in all of those examples the effects of actions cannot be full
 <br>
 
 In all of these examples the agent can use experience to imporve its performance over time.
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+#### 1 Introduction 1
+<b>1.1 Reinforcement Learning<br>
+1.2 Examples<br></b>
+1.3 Elements of Reinforcement Learning<br>
+1.4 Limitations and Scope<br>
+1.5 An Extended Example: Tic-Tac-Toe<br>
+1.6 Summary<br>
+1.7 Early History of Reinforcement Learning<br>
