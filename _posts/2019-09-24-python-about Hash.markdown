@@ -40,7 +40,7 @@ Dirct-access table의 아이디어는 key들을 집합 $U \subseteq \\{0,1, \dot
 
 - Open addressing : $U \times \\{0,1,\dots,m-1\\} \to \\{0,1,\dots,m-1\\}$<br>
 (The probe sequence $<h(k,0),h(k,1),\dots,h(k,m-1)>$은 permuatation of $\\{0,1,\dots,m-1\\}$, 채우는건 쉽지만, 삭제는 어렵다.)
-- Linear probing : $h(k,i)=(h'(k)+i)\mod m$<br>
+   + Linear probing : $h(k,i)=(h'(k)+i)\mod m$<br>
 ($h'(k)$: 일반적인 hash function, primary clustering 위험(평균 탐색 시간이 늘어남))
-- Double hashing : $h(k,i) = (h_1(k) + i \cdot h_2(k)) \mod m$<br>
+   + Double hashing : $h(k,i) = (h_1(k) + i \cdot h_2(k)) \mod m$<br>
 ($h_1(k), h_2(k)$: 일반적인 hash functions, 왠만하면 $h_2(k)$는 $m$과 relatively prime인게 좋다. 하나의 방법으로 $m$을 2의 배수로, $h_2(k)$를 홀수로 한다.)
