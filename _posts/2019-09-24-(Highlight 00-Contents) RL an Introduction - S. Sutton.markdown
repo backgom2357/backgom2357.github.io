@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '(Highlight 00-Contents) RL an Introduction - S. Sutton'
+title: 'Highlight00 - Contents <br> [RL an Introduction - S. Sutton]'
 date: 2019-09-24
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
@@ -64,12 +64,12 @@ image: images/RLIntroduction_Sutton.png
 5.9 \*Per-decision Importance Sampling<br>
 5.10 Summary<br>
 
-#### 6 Temporal-Di↵erence Learning
+#### 6 Temporal-Difference Learning
 6.1 TD Prediction<br>
 6.2 Advantages of TD Prediction Methods<br>
 6.3 Optimality of TD(0)<br>
 6.4 Sarsa: On-policy TD Control<br>
-6.5 Q-learning: O↵-policy TD Control<br>
+6.5 Q-learning: Off-policy TD Control<br>
 6.6 Expected Sarsa<br>
 6.7 Maximization Bias and Double Learning<br>
 6.8 Games, Afterstates, and Other Special Cases<br>
