@@ -36,7 +36,7 @@ While we are playing, we change the values of the states in which we find oursel
 More precisely, the current value of the earlier state is updated to be closer to the value of the later state. If we let $S_t$ denote the state before the greedy move, and $S_{t+1}$ the state after the move, then the update to the estimated value of $S_t$, denoted $V(S_t)$, can be written as
 
 $$
-V(S_t) \leftarrow V(S_t) + \alpha [V(S_{t+1) - V(S_t)})],
+V(S_t) \leftarrow V(S_t) + \alpha [V(S_{t+1}) - V(S_t))],
 $$
 
 where $\alpha$ is a small positive fraction called the step=size parameter, which influences the rate of learning. This update rule is an example of a temporal-difference learning method, so called because its changes are based on a difference, $V(S_{t+1})-V(S_t)$, between estimates at two successive items.
