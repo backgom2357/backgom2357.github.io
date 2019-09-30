@@ -1,0 +1,85 @@
+---
+layout: post
+title: 'Highlight05 - 2.1 k-armed Bandit Problem <br> [RL an Introduction - S. Sutton]'
+date: 2019-09-30
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+## Part I: Tabular Solution Methods
+In this part of the book we describe almost all the core ideas of reinforcement learning algorithms in their simplest forms: that in which the state and action spaces are small enough for the approximate value functions to be represented as arrays, or tables.
+<br>
+
+The first chapter describes solution methods for the special case of the reinforcement learning problem in which there is only a single state, called bandit problems.
+<br>
+
+The second chapter describes the general problem formulation that we treat throughout the rest of the book--finite Markov decision processes--and its main ideas including Bellman equations and value functions.
+<br>
+
+The next three chapters describe three fundamental classes of methods for solving finite Markov decision problems:
+- dynamic programming,
+- Monte Carlo methods,
+- temporal difference Learning
+<br>
+
+The remaining two chapters describe how these three classes of methods can be combined to obtain the best features of each of them.
+- In one chapter we describe how the strengths of Monte Carlo methods can be combined with the strengths of temporal-difference methods via multi-step bootstrapping methods.
+- In final chapter we show how temporal-difference learning methods can be combined with model learning and planning methods for a complete and unified solution to the tabular reinforcement learning problem.
+<br>
+
+## Chapter 2 Multi-armed Bandits
+The most important feature distinguishing reinforcement learning from other types of learning is that it uses training information that evaluates the actions taken rather than instructs by giving correct actions.
+<br>
+
+In this chapter we study the evaluative aspect of reinforcement learning in a simplified setting, one that does not involve learning to act in more than one situation. This nonassociative setting is the one in which most prior work involving evaluative feedback has been done, and it avoids much of the complexity of the full reinforcement learning problem. Studying this case enables us to see most clearly how evaluative feedback differs from, and yet can be combined with, instructive feedback.
+<br>
+
+The particular nonassociative, evaluative feedback problem that we explore is a simple version of the k-armed bandit problem.
+<br>
+
+### 2.1 A $k$-armed Bandit Problem
+Consider the following learning problem. You are faced repeatedly with a choice among $k$ different options, or actions. After each choice you receive a numerical reward chosen from a stationary probability distribution that depends on the action you selected. Your objective is to maximize the expected total reward over some time period, for example, over 100 action selections, or time steps.
+<br>
+
+This is the original form of the $k$-armed bandit problem, so named by analogy to a slot machine, or "one-armed bandit," except that it has $k$ levers instead of one.
+<br>
+
+In our $k$-arm bandit problem, each of the $k$ actions has an expected or mean reward given that that action is selected; let us call this the value of that action. We denote the action selected on time step $t$ as $A_t$, and the corresponding reward as $R_t$. The value then of an arbitrary action a, denoted $q_*(a)$, is the expected reward given that a is selected:
+
+$$
+q_*(a) \doteq \Bbb{E}[R_t|A_t=a]
+$$
+
+We assume that you do not know the action values with certainty, although you may have estimates. We denote the estimated value of action $a$ at time step $t$ as $Q_t(a)$. We would like $Q_t(a)$ to be close to $q_*(a)$.
+<br>
+
+If you maintain estimates of the action values, then at any time step there is at least one action whose estimated value is greatest. We call these the greedy actions. When you select one of these actions, we way that you are exploiting your current knowledge of the values of the actions. If instead you select one of the nongreedy actions, then we say you are exploring.
+<br>
+
+Exploitation is the right thing to do to maximize the expected reward on the one step, but exploration may produce the greater total reward in the long run.
+<br>
+
+In any specific case, whether it is better to explore or exploit depends in a complex way on the precise values of the estimates, uncertainties, and the number of remaining steps.
+<br>
+
+In this book we do not worry about balancing exploration and exploitation in a sophisticated way; we worry only about balancing them at all. In this chapter we present several simple balancing methods for the $k$-armed bandit problem and show that they work much better than methods that always exploit.
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+<b>2.1 A k-armed Bandit Problem<br></b>
+2.2 Action-value Methods<br>
+2.3 The 10-armed Testbed<br>
+2.4 Incremental Implementation<br>
+2.5 Tracking a Nonstationary Problem<br>
+2.6 Optimistic Initial Values<br>
+2.7 Upper-Confidence-Bound Action Selection<br>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
