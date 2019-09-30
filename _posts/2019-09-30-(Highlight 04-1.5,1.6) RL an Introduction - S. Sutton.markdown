@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Highlight03 - 1.5 An Extended Example: Tic-Tac-Toe, 1.6 Summary <br> [RL an Introduction - S. Sutton]'
+title: 'Highlight04 - 1.5 An Extended Example: Tic-Tac-Toe, 1.6 Summary <br> [RL an Introduction - S. Sutton]'
 date: 2019-09-30
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
