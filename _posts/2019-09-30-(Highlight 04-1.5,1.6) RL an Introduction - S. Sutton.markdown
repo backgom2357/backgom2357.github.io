@@ -1,0 +1,111 @@
+---
+layout: post
+title: 'Highlight03 - 1.5 An Extended Example: Tic-Tac-Toe, 1.6 Summary <br> [RL an Introduction - S. Sutton]'
+date: 2019-09-30
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 1.5 An Extended Example: Tic-Tac-Toe
+Two players take turns playing on a three-by-three board. One player plays Xs and the other Os until one player wins by placing three marks in a row, horizontally, vertically, or diagonally.
+<br>
+
+How might we construct a player that will find the imperfections in its opponent's play and learn to maximize its chances of winning?
+<br>
+
+Although this is a simple problem, it cannot readily be solved in a satisfactory way through classical techniques. For example, the classical "minimax" solution from game theory is not correct here because it assumes a particular way of playing by the opponent.
+<br>
+
+Classical optimization methods for sequential decision problems, such as dynamic programming, can compute an optimal solution for any opponent, but require as input a complete specification of that opponent, including the probabilities with which the opponent makes each move in each board state.
+<br>
+
+About the best one can do on this problem is first to learn a model of the opponent's behavior, up to some level of confidence, and then apply dynamic programming to compute an optimal solution given the approximate opponent model.
+<br>
+
+AN evolutionary method applied to this problem would directly search the space of possible policies for one with a high probability of winning against the opponent. Here, a policy is a rule that tells the player what move to make for every state of the game--every possible configuration of Xs and Os on the three-by-three board. For each policy considered, an estimate of its winning probability would be obtained by playing some number of games against the opponent. This evaluation would then direct which policy or policies were considered next.
+<br>
+
+Here is how the tic-tac-toe problem would be approached with a method making use of a value function. First we would set up a table of numbers, one for each possible state of the game. Each number will be the latest estimate of the probability of our winning from that state. We treat this estimate as the state's value, and the whole table is he learned value function.
+<br>
+
+We then play many games against the opponent. To select our moves we examine the states that would result from each of our possible moves (one for each blank space on the board) and look up their current values in the table. Most of the time we move greedily, selecting the move that leads to the state with greatest value, that is, with the highest estimated probability of winning. Occasionally, however, we select randomly from among the other moves instead. These are called exploratory moves because they cause us to experience states that we might otherwise never see.
+<br>
+
+While we are playing, we change the values of the states in which we find ourselves during the game. We attempt to make them more accurate estimates of the probabilities of winning. To do this, we "back up" the value of the state after each greedy move to the state before the move.
+<br>
+
+More precisely, the current value of the earlier state is updated to be closer to the value of the later state. If we let $S_t$ denote the state before the greedy move, and $S_{t+1}$ the state after the move, then the update to the estimated value of $S_t$, denoted $V(S_t)$, can be written as
+
+$$
+V(S_t) \from V(S_t) + \alpha [V(S_{t+1) - V(S_t)})],
+$$
+
+where $\alpha$ is a small positive fraction called the step=size parameter, which influences the rate of learning. This update rule is an example of a temporal-difference learning method, so called because its changes are based on a difference, $V(S_{t+1})-V(S_t)$, between estimates at two successive items.
+<br>
+
+This example illustrates the differences between evolutionary methods and methods that learn value functions. To evaluate a policy an evolutionary method hold the policy fixed and plays many games against the opponent, or simulates many games using a model of the opponent. The frequency of wins gives an unbiased estimate of the probability of winning with that policy, and can be used to direct the next policy selection. But each policy change is made only after many games, and only the final outcome of each game is used: what happens during the game is ignored.
+<br>
+
+Value function methods, in contrast, allow individual states to be evaluated. In the end, evolutionary and value function methods both search the space of policies, but learning a value function takes advantage of information available during the course of play.
+<br>
+
+This simple example illustrates some of the key features of reinforcement learning methods.
+- First, there is the emphasis on learning while interacting with an environment, in this case with an opponent player.
+- Second, there is a clear goal, and correct behavior requires planning or foresight that takes into account delayed effects of one's choices.
+<br>
+
+While this example illustrates some of the key features of reinforcement learning, it is so simple that it might give the impression that reinforcement learning is more limited than it really is.
+<br>
+
+Reinforcement learning applies in the case in which there is no external adversary, that is, in the case of a "game against nature"
+<br>
+
+Tic-tac-toe has a relatively small, finite state set, whereas reinforcement learning can be used when the state set is very large, or even infinite.
+<br>
+
+How well a reinforcement learning system can work in problems with such large state sets is intimately tied to how appropriately it can generalize from past experience.
+<br>
+
+Artificial neural networks and deep learning are not the only, or necessarily the best, way to do this.
+<br>
+
+Prior information can be incorporated into reinforcement learning in a variety of ways that can be critical for efficient learning.
+<br>
+
+Reinforcement learning can also be applied when part of the state is hidden, or when different states appear to the learner to be the same.
+<br>
+
+Finally, the tic-tac-toe player was able to look ahead and know the states that would result from each of its possible moves. To do this, it had to have a model of the game that allowed it to foresee how its environment would change in response to moves that it might never make. But in others even a short-term model of the effects of actions is lacking.
+<br>
+
+Reinforcement learning can be applied in either case. A model is not required, but models can easily be used if they are available or can be learned.
+<br>
+
+On the other hand, there are reinforcement learning methods that do not need any kind of environment model at all.
+<br>
+
+Model-free methods can have advantages over more complex methods when the real bottleneck in solving a problem is the difficulty of constructing a sufficiently accurate environment model. Model-free methods are also important building blocks for model-based methods.
+<br>
+
+Reinforcement learning can be used at both high and low levels in a system. Although the tic-tac-toe player learned only about the basic moves of the game, nothing prevents reinforcement learning from working at higher levels where each of the "actions" may itself be the application of a possibly elaborate problem-solving method.
+<br>
+
+### 1.6 Summary
+Reinforcement learning is a computational approach to understanding and automating goal-directed learning and decision making.
+<br>
+
+Reinforcement learning uses the formal framework of Markov decision processes to define the interaction between a learning agent and its environment in terms of states, actions, and rewards.
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+#### 1 Introduction 1
+1.1 Reinforcement Learning<br>
+1.2 Examples<br>
+1.3 Elements of Reinforcement Learning<br>
+1.4 Limitations and Scope<br>
+<b>1.5 An Extended Example: Tic-Tac-Toe<br>
+1.6 Summary<br></br>
+1.7 Early History of Reinforcement Learning<br>
