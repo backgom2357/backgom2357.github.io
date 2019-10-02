@@ -20,6 +20,8 @@ Heap은 Complete binary tree이다.
 - $\text{right index} = index * 2 + 1$
 - $\text{parent index} = index / 2$
 
+Min heap 예시
+
 ```python
 class Node:
     def __init__(self, key):
