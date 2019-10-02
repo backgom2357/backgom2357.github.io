@@ -9,11 +9,10 @@ image: images/RLIntroduction_Sutton.png
 We begin by looking more closely at methods for estimating the values of actions and for using the estimates to make action selection decisions, which we collectively call action-value methods. Recall that the true value of an action is the mean reward when that action is selected. One natural way to estimate this is by averaging the rewards actually received:
 
 $$
-Q_t(a) \dotep \frac{\text{sum of rewards when a taken prior to t}}{number of times a taken prior to t}
-\eq \frac{\sum_{i=1}^{t-1} R_i \cdot \Bbb{1}_{A_i=a}}{\sum_{i=1}^{t-1} \Bbb{1}_{A_i=a}}
+Q_t(a) \doteq \frac{\text{sum of rewards when a taken prior to t}}{\text{number of times a taken prior to t}} = \frac{\sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i=a}}{\sum_{i=1}^{t-1} \mathbb{1}_{A_i=a}},
 $$
 
-where $\Bbb{1}_predicate$ denotes the random variable that is 1 if predicate is true and 0 if it is not. If the denominator is zero, then we instead define $Q_t(a)$ as some default value, such as 0. As the denominator goes to infinity, by the law of large numbers, $Q_t(a)$ converges to $q_*(a)$. We call this the sample-average method for estimating action values because each estimate is an average of the sample of relevant rewards.
+where $ \mathbb{1}_ \text{predicate} $ denotes the random variable that is 1 if predicate is true and 0 if it is not. If the denominator is zero, then we instead define $Q_t(a)$ as some default value, such as 0. As the denominator goes to infinity, by the law of large numbers, $Q_t(a)$ converges to $q_*(a)$. We call this the sample-average method for estimating action values because each estimate is an average of the sample of relevant rewards.
 <br>
 
 The simplest action selection rule is to select one of the actions with the highest estimated value, that is, one of the greedy actions as defined in the previous section.
@@ -22,10 +21,16 @@ The simplest action selection rule is to select one of the actions with the high
 We write this greedy action selection method as
 
 $$
-
-A_t \dotep
+A_t \doteq \underset{a}{\operatorname{argmax}} Q_t(a),
 $$
 
+where $\underset{a}{\operatorname{argmax}}$ denotes the action a for which the expression that follows is maximized(again, with ties broken arbitrarily). Greedy action selection always exploits current knowledge to maximize immediate reward.
+<br>
+
+A simple alternative is to behave greedily most of the time, but every once in a while, say with small probability $\epsilon$, instead select randomly from among all the actions with equal probability, independently of the action-value estimates. We call methods using this near-greedy action selection rule $\epsilon$-greedy methods.
+<br>
+
+An advantage of these methods is that, in the limit as the number of steps increases, every action will be sampled an infinite number of times, thus ensuring that all the $Q_t(a)$ converge to $q_*(a)$. This of course implies that the probability of selecting the optimal action converges to greater than $1-\epsilon$, that is, to near certainty.
 
 
 
