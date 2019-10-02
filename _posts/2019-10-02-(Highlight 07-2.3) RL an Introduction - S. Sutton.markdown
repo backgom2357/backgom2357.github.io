@@ -1,0 +1,63 @@
+---
+layout: post
+title: 'Highlight07 - 2.3 The 10-armed Testbed <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-02
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 2.3 The 10-armed Testbed
+To roughly assess the relative effectiveness of the greedy and $\epsilon$-greedy action-value methods, we compared them numerically on a suite of thest problems. This was a set of 2000 randomly generated $k$-armed bandit problems with $k$ = 10.
+<br>
+
+![Figure2.1](/images/Figure2.1.png){: width="60%" height="auto" .image-center}
+<I>The true value $q_* (a)$ of each of the tem actions was selected according to a normal distribution with mean zero and unit variance, and then the actual rewards were selected according to a mean $q_*(a)$ unit variance normal distribution, as suggested by these gray distributions.</I>
+<br>
+
+We call this suite of test tasks the 10-armed testbed.
+<br>
+
+Repeating this for 2000 independent runs, each with a different bandit problem, we obtained measures of the learning algorithm's average behavior.
+<br>
+
+All the methods formed their action-value estimates using the sample-average technique.
+<br>
+
+![Figure2.2](/images/Figure2.2.png){: width="60%" height="auto" .image-center}
+<br>
+
+In the other two-thirds, its initial samples of the optimal action were disappointing, and it never returned to it. The $\epsilon$-methods eventually performed better because they continued to explore and to improve their chances of recognizing the optimal action.
+<br>
+
+It is also possible to reduce $\epsilon$ over time to try to get the best of both high and low values.
+<br>
+
+The advantage of $\epsilon$-greedy over greedy methods depends on the task.
+<br>
+
+With noisier rewards it takes more exploration to find the optimal action, and $\epsilon$-greedy methods should fare even better relative to the greedy method. On the other handm if the reward variances were zero, than the greedy method would know the true value of each action after trying it once. In this case the greedy method might actually perform best because it would soon find the optimal action and then never explore. But even in the deterministic case there is a large advantage to exploring if we weaken some of the assumptions.
+<br>
+
+As we shell see in the next few chapters, nonstationarity is the case most commonly encountered in reinforcement learning.
+<br>
+
+Reinforcement learning requires a balance between exploration and exploitation.
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+2.1 A k-armed Bandit Problem<br>
+2.2 Action-value Methods<br>
+<b>2.3 The 10-armed Testbed<br></b>
+2.4 Incremental Implementation<br>
+2.5 Tracking a Nonstationary Problem<br>
+2.6 Optimistic Initial Values<br>
+2.7 Upper-Confidence-Bound Action Selection<br>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
