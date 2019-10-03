@@ -14,7 +14,9 @@ $$
 
 where $ \mathbb{1}_ \text{predicate} $ denotes the random variable that is 1 if predicate is true and 0 if it is not. If the denominator is zero, then we instead define $Q_t(a)$ as some default value, such as 0. As the denominator goes to infinity, by the law of large numbers, $Q_t(a)$ converges to $q_*(a)$. We call this the sample-average method for estimating action values because each estimate is an average of the sample of relevant rewards.
 <br>
+($ \mathbb{1}_ \text{predicate} $ 라는 건 행동이 가능한 범주(집합)에 있을 때(혹은 유의미한 행동을 했을 때) 1을, 불가능한 행동(범주에 맞지 않는 행동)을 했을 때 0 을 주겠다는 것이다.)
 
+<br>
 The simplest action selection rule is to select one of the actions with the highest estimated value, that is, one of the greedy actions as defined in the previous section.
 <br>
 
