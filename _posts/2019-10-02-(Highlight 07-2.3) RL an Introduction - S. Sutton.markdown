@@ -25,7 +25,7 @@ All the methods formed their action-value estimates using the sample-average tec
 ![Figure2.2](/images/Figure2.2.png){: width="60%" height="auto" .image-center}
 <br>
 
-In the other two-thirds, its initial samples of the optimal action were disappointing, and it never returned to it. The $\epsilon$-methods eventually performed better because they continued to explore and to improve their chances of recognizing the optimal action.
+The $\epsilon$-methods eventually performed better because they continued to explore and to improve their chances of recognizing the optimal action.
 <br>
 
 It is also possible to reduce $\epsilon$ over time to try to get the best of both high and low values.
