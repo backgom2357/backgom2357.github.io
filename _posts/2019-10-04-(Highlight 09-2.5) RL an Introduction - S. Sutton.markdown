@@ -1,0 +1,81 @@
+---
+layout: post
+title: 'Highlight09 - 2.5 Tracking a Nonstationary Problem <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-04
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 2.5 Tracking a Nonstationary Problem
+The averaging methods discussed so far are appropriate for stationary bandit problems, that is, for bandit problems in which the reward probabilities do not change over time.
+<br>
+
+As noted earlier, we often encounter reinforcement learning problems that are effectively nonstationary. I such cases it makes sense to give more weight to recent rewards than to long-past rewards.
+<br>
+
+One of the most popular ways of doing this is to use a constant step-size parameter. For example,
+
+$$
+Q_{n+1} \doteq Q_n + \alpha[R_n - Q_n],
+$$
+
+where the step-size parameter $\alpha \in (0,1]$ is constant. This results in $Q_{n+1}$ being a weighted average of past rewards and the initial estimate $Q_1$:
+
+$$
+\begin{align}
+Q_{n+1} & = Q_n + \alpha[R_n - Q_n] \\
+& = \alpha R_n + (1 - \alpha)Q_n \\
+& = \alpha R_n + (1 - \alpha)[\alpha R_{n-1} + (1 - \alpha)Q_{n-1}] \\
+& = \alpha R_n + (1 - \alpha)\alpha R_{n-1} + (1 - \alpha)^2 Q_{n-1} \\
+& = \alpha R_n + (1 - \alpha)\alpha R_{n-1} + (1 - \alpha)^2 \alpha R_{n-2}+ \\
+& \cdots + (1 - \alpha)^{n-1} \alpha R_1 + (1 - \alpha)^n Q_1 \\
+& = (1 - \alpha)^n Q_1 + \sum_{i=1}^n \alpha(1-\alpha)^{n-i} R_i.
+\end{align}
+$$
+
+We call this a weighted average because the sum of the weights is $(1-\alpha)^n + \sum_{i=1}^n \alpha (1-\alpha)^{n-i} = 1$.
+<br>
+
+Note that the weight, $\alpha(1-\alpha)^{n-i}$, given to the reward $R_i$ depends on how many rewards age, $n-i$, it was observed. The quantity $1-\alpha$ is less than $1$, and thus the weight given to $R_i$ decreases as the number of intervening rewards increases.
+<br>
+
+Accordingly, this is sometimes called an exponential recency-wieghted average.
+<br>
+
+Sometimes it is convenient to vary the step-size parameter from step to step. Let $\alpha_n(a)$ denote the step-size parameter used to process the reward received after the $n$th selection of action $a$.
+<br>
+
+Of course convergence is not guaranteed for all choices of the sequence $\\{\alpha_n(a)\\}$. A well-known result in stochastic approximation theory gives us the conditions required to assure convergence with probability 1:
+
+$$
+\sum_{n=1}^\infty \alpha_n(a) = \infty \\ and \\ \sum_{n=1}^\infty \alpha_n^2 (a) < \infty
+$$
+
+The first condition is required to guarantee that the steps are large enough to eventually overcome any initial conditions or random fluctuations. The second condition guarantees that eventually the steps become small enough to assure convergence.
+<br>
+
+As we mentioned above, this is actually desirable in a nonstationary environment, and problems that are effectively nonstationary are the most common in reinforcement learning.
+<br>
+
+Although sequences of step-size parameters that meet these convergence conditions are often used in theoretical works, they are seldom used in applications and empirical research.
+
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+2.1 A k-armed Bandit Problem<br>
+2.2 Action-value Methods<br>
+2.3 The 10-armed Testbed<br>
+2.4 Incremental Implementation<br>
+<b>2.5 Tracking a Nonstationary Problem<br></b>
+2.6 Optimistic Initial Values<br>
+2.7 Upper-Confidence-Bound Action Selection<br>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
