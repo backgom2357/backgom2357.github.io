@@ -16,6 +16,9 @@ To roughly assess the relative effectiveness of the greedy and $\epsilon$-greedy
 We call this suite of test tasks the 10-armed testbed.
 <br>
 
+For any learning method, we can measure its performance and behavior as it improves with experience over 1000 time steps when applied to one of the bandit problems. This makes up one run.
+<br>
+
 Repeating this for 2000 independent runs, each with a different bandit problem, we obtained measures of the learning algorithm's average behavior.
 <br>
 
