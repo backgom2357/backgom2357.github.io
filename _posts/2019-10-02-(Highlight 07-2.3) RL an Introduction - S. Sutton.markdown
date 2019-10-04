@@ -10,7 +10,7 @@ To roughly assess the relative effectiveness of the greedy and $\epsilon$-greedy
 <br>
 
 ![Figure2.1](/images/Figure2.1.png){: width="60%" height="auto" .image-center}
-<I>The true value $q_* (a)$ of each of the tem actions was selected according to a normal distribution with mean zero and unit variance, and then the actual rewards were selected according to a mean $q_*(a)$ unit variance normal distribution, as suggested by these gray distributions.</I>
+<I>The true value $q_* (a)$ of each of the ten actions was selected according to a normal distribution with mean zero and unit variance, and then the actual rewards were selected according to a mean $q_*(a)$ unit variance normal distribution, as suggested by these gray distributions.</I>
 <br>
 
 We call this suite of test tasks the 10-armed testbed.
@@ -37,7 +37,7 @@ It is also possible to reduce $\epsilon$ over time to try to get the best of bot
 The advantage of $\epsilon$-greedy over greedy methods depends on the task.
 <br>
 
-With noisier rewards it takes more exploration to find the optimal action, and $\epsilon$-greedy methods should fare even better relative to the greedy method. On the other handm if the reward variances were zero, than the greedy method would know the true value of each action after trying it once. In this case the greedy method might actually perform best because it would soon find the optimal action and then never explore. But even in the deterministic case there is a large advantage to exploring if we weaken some of the assumptions.
+With noisier rewards it takes more exploration to find the optimal action, and $\epsilon$-greedy methods should fare even better relative to the greedy method. On the other hand, if the reward variances were zero, than the greedy method would know the true value of each action after trying it once. In this case the greedy method might actually perform best because it would soon find the optimal action and then never explore. But even in the deterministic case there is a large advantage to exploring if we weaken some of the assumptions.
 <br>
 
 As we shell see in the next few chapters, nonstationarity is the case most commonly encountered in reinforcement learning.
