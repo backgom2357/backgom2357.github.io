@@ -1,0 +1,98 @@
+---
+layout: post
+title: 'Highlight08 - 2.4 Incremental Implementation <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-04
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 2.4 Incremental Implementation
+The action-value methods we have discussed so far all estimate action values as sample averages of observed rewards. We now turn to the question of how these averages can be computed in a computationally efficient manner, in particular, with constant memory and constant per-time-step computation.
+<br>
+
+To simplify notation we concentrate on a single action. Let $R_i$ now denote the reward receive after the $i$th selection of this action, and let $Q_n$ denote the estimate of its action value after it has been selected n-1 times, which we can now write simply as
+
+$$
+Q_n \doteq \frac{R_1 + R_2 + \cdots + R_{n-1}}{n-1}.
+$$
+
+However, if this is done, then the memory and computational requirements would grow over time as more rewards are seen.
+<br>
+
+As you might suspect, this is not really necessary.
+<br>
+
+Given $Q_n$ and the $n$th reward, $R_n$, the new average of all $n$ rewards can be computed by
+
+$$
+\begin{align}
+Q_{n+1} & = \frac{1}{n} \sum_{i=1}^n R_i \\
+& = \frac{1}{n} ( R_n + \sum_{i=1}^{n-1} R_i ) \\
+& = \frac{1}{n} ( R_n + (n-1)\frac{1}{n-1} \sum_{i=1}^{n-1} R_i ) \\
+& = \frac{1}{n} ( R_n + (n-1)Q_n) \\
+& = \frac{1}{n} ( R_n + n Q_n - Q_n) \\
+& = Q_n + \frac{1}{n} [R_n - Q_n], \\
+\end{align}
+$$
+
+which holds even for $n=1$, obtaining $Q_2 = R_1$ for arbitrary $Q_1$. This Implementation requires memory only for $Q_n$ and $n$, and only the small computation for each new rewards.
+<br>
+
+The general form is
+
+$$
+NewEstimate \leftarrow OldEstimate + StepSize[Target - OldEstimate].
+$$
+
+The expression $[Target - OldEstimate]$ is an error in the estimate.
+<br>
+
+In this book we denote the step-size parameter by $\alpha$ or, more generally, by $\alpha_t(a)$.
+<br>
+
+The function bandit(a) is assumed to take an action and return a corresponding reward.
+<br>
+
+<div class="box">
+<h1>A simple bandit algorithms</h1>
+Initialize, for a = 1 to k:<br>
+  $Q(a) \leftarrow 0$<br>
+  $N(a) \leftarrow 0$<br>
+<br>
+Loop forever:<br>
+  $A \leftarrow
+  \begin{cases}
+  \underset{a}{\operatorname{argmax}} Q(a) & \text{with probability 1}-\epsilon \\
+  & \text{(breaking ties randomly)} \\
+  \text{a random action} & \text{with probability} \epsilon
+  \end{cases}
+  $
+  $R \leftarrow bandit(A)$<br>
+  $N(A) \leftarrow N(A) + 1$<br>
+  $Q(A) \leftarrow Q(A) + \frac{1}{N(A)} [R-Q(A)]$
+</div>
+<br>
+
+
+
+[(Github) Simple bandit algorithms with python](https://github.com/backgom2357/RL_Introduction_examples_sutton/blob/master/greedy_action_selection.ipynb)
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+2.1 A k-armed Bandit Problem<br>
+2.2 Action-value Methods<br>
+2.3 The 10-armed Testbed<br>
+<b>2.4 Incremental Implementation<br></b>
+2.5 Tracking a Nonstationary Problem<br>
+2.6 Optimistic Initial Values<br>
+2.7 Upper-Confidence-Bound Action Selection<br>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
