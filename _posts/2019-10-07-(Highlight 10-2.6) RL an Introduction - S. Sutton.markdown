@@ -1,0 +1,72 @@
+---
+layout: post
+title: 'Highlight10 - 2.6 Optimistic Initial Values <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-07
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 2.6 Optimistic Initial Values
+All the methods we have discussed so far are dependent to some extent on the initial action-value estimates, $Q_1(a)$. In the language of statistics, these methods are biased by their initial estimates.
+<br>
+
+For the sample-average methods, the bias disappears once all actions have been selected at least once, but for methods with constant $\alpha$, the bias is permanent.
+<br>
+
+The downside is that the initial estimates become, in effect, a set of parameters that must be picked by the user, if only to set them all to zero.
+<br>
+
+The upside is that they provide an easy way to supply some prior knowledge about what level of rewards can be expected.
+<br>
+
+Initial action values can also be used as a simple way to encourage exploration.
+<br>
+
+Suppose that instead of setting the initial action values to zero, as we did in the 10-armed testbed, we set them all to $+5$.
+<br>
+
+An initial estimate of %+5$ is thus wildly optimistic. But this optimism encourages action-value methods to explore. Whichever actions are initially selected, the reward is less than the starting estimates; the learner switches to other actions, being "disappointed" with the rewards it is receiving.
+<br>
+
+The system does a fair amount of exploration even if greedy actions are selected all the time.
+<br>
+
+The following figure shows the performance on the 10-armed bandit testbed of a greedy method using $Q_1(a) = +5$, for all $a$.
+<br>
+
+![Figure2.3](/images/Figure2.3.png){: width="60%" height="auto" .image-center}
+
+Initially, the optimistic method performs worse because it explores more, but eventually it performs better because its exploration decreases with time. We call this technique for encourage exploration optimistic initial values.
+<br>
+
+It is far from being a generally useful approach to encouraging exploration. For example, it is not well suited to nonstationary problems because its drive for exploration is inherently temporary.
+<br>
+
+Indeed, any method that focuses on the initial conditions in any special  way is unlikely to help with the general nonstationary case.
+<br>
+
+This criticism applies as well to the sample-average methods.
+<br>
+
+Nevertheless, all of these methods are very simple, and one of them -- or some simple combination of them -- is often adequate in practice.
+
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+2.1 A k-armed Bandit Problem<br>
+2.2 Action-value Methods<br>
+2.3 The 10-armed Testbed<br>
+2.4 Incremental Implementation<br>
+2.5 Tracking a Nonstationary Problem<br>
+<b>2.6 Optimistic Initial Values<br></b>
+2.7 Upper-Confidence-Bound Action Selection<br>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
