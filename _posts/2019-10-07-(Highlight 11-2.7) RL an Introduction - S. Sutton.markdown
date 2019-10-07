@@ -1,0 +1,58 @@
+---
+layout: post
+title: 'Highlight11 - 2.7 Upper-Confidence-Bound Action Selection <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-07
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 2.7 Upper-Confidence-Bound Action Selection
+Exploration is needed because there is always uncertainty about the accuracy of the action-value estimates.
+<br>
+
+$\epsilon$-greedy action selection forces the non-greedy actions to be tried, but indiscriminately, with no preference for those that are nearly greedy or particularly uncertain.
+<br>
+
+It would be better to select among the non-greedy actions according to their potential for actually being optimal, taking into account both how close their estimates are to being maximal and the uncertainties in those estimates. One effective way of doing this is to select actions according to
+
+$$
+A_t \doteq \underset{a}{\operatorname{argmax}} \Biggl[ Q_t(a)+c \sqrt{\frac{\ln{t}}{N_t(a)}} \Biggr],
+$$
+
+where $\ln{t}$ denotes the natural logarithm of $t$, $N_t(a)$ denotes the number of times that action $a$ has been selected prior to time $t$, and  the number $c > 0$ controls the degree of exploration. If $N_t(a) = 0$, then $a$ is considered to be a maximizing action.
+<br>
+
+The idea of this upper confidence bound(UCB) action selection is that the square-root term is a measure of the uncertainty or variance in the estimate of $a$'s value.
+<br>
+
+The use of the natural logarithm means that the increases get smaller over time, but are unbounded; all actions will eventually be selected, but actions with lower value estimates, or that have already been selected frequently, will be selected with decreasing frequency over time.
+<br>
+
+Results with UCB on the 10-armed testbed are shown in below. UCB often performs well.
+<br>
+
+In more advanced setting, however, the idea of UCB action selection is usually not practical.
+<br>
+
+![Figure2.4](/images/Figure2.4.png){: width="60%" height="auto" .image-center}
+
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+2.1 A k-armed Bandit Problem<br>
+2.2 Action-value Methods<br>
+2.3 The 10-armed Testbed<br>
+2.4 Incremental Implementation<br>
+2.5 Tracking a Nonstationary Problem<br>
+2.6 Optimistic Initial Values<br>
+<b>2.7 Upper-Confidence-Bound Action Selection<br></b>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
