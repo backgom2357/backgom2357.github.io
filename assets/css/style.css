@@ -613,7 +613,8 @@ body:after {
       font-size: 3rem; } }
 
 .circle-bg {
-  position: relative; }
+  position: relative;
+  text-align: center;}
   .circle-bg:after {
     width: 300px;
     height: 300px;
@@ -626,8 +627,7 @@ body:after {
     background: #f8f9fa; }
     @media (max-width: 991.98px) {
       .circle-bg:after {
-        bottom: 0px;
-        right: -90px; } }
+        display:none; } }
 
 .site-block-subscribe .btn {
   padding-left: 20px;
