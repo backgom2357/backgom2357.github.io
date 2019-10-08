@@ -33,7 +33,7 @@ The system does a fair amount of exploration even if greedy actions are selected
 The following figure shows the performance on the 10-armed bandit testbed of a greedy method using $Q_1(a) = +5$, for all $a$.
 <br>
 
-![Figure2.3](/images/Figure2.3.png){: width="60%" height="auto" .image-center}
+![Figure2.3](/images/Figure2.3.png){: .image-center}
 
 Initially, the optimistic method performs worse because it explores more, but eventually it performs better because its exploration decreases with time. We call this technique for encourage exploration optimistic initial values.
 <br>

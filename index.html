@@ -1,129 +1,164 @@
 ---
 title: DearMinor
 ---
+
 <!DOCTYPE HTML>
-<!--
-	Theory by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>DIOMINOR</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
+<html lang="en">
+  <head>
+    <title>DearMinor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="{{ site.data.navigation[0].link }}" class="logo">DOMINO</a>
-					<nav id="nav">
-						{% for item in site.data.navigation %}
-							<a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>
-	             {{ item.name }}
-	            </a>
-						{% endfor %}
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
-			</header>
 
-		<!-- Banner -->
-			<section id="banner">
-				<h1>Diominor's Repository</h1>
-				<p>취미메모아무거나의미없이모아논저장소</p>
-			</section>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
 
-		<!-- One -->
-			<section id="one" class="wrapper">
-				<div class="inner">
-					<header class="align-center">
-						<p>
-							Recent Programming Post<br>
-							최근 프로그래밍 글
-						</p>
-					</header>
-					<div class="flex flex-3">
-						{% for post in site.categories.programming limit:3 %}
-						<article>
-							<header>
-								<h3>{{ post.title }}</h3>
-								<p><I> {{ post.date | date_to_string }} </I></p>
-							</header>
-							<p>{{ post.excerpt | strip_html | truncatewords: 30}}</p>
-							<footer>
-								<a href="{{ post.url | prepend: site.baseurl }}" class="button special">More</a>
-							</footer>
-						</article>
-						{% endfor %}
-					</div>
-				</div>
-			</section>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/owl.theme.default.min.css">
 
-		<!-- Two -->
-			<section id="two" class="wrapper style1 special">
-				<div class="inner">
-					<header>
-						<p>
-							Recent M.L. Post<br>
-							최근 머신러닝 글
-						</p>
-					</header>
-					<div class="flex flex-4">
-						{% for post in site.categories.machine_learning limit:3 %}
-							<div class="box person">
-								<a href="{{ post.url | prepend: site.baseurl }}">
-									<div class="image round">
-										<img src= {{ post.image }} alt="{{ post.title }}" >
-									</div>
-									<h3>{{ post.title }}</h3>
-								</a>
-								<p><I> {{ post.date | date_to_string }} </I></p>
-							</div>
-						{% endfor %}
-					</div>
-				</div>
-			</section>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/jquery.fancybox.min.css">
 
-<!-- Three
-			<section id="three" class="wrapper special">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Recent Blog</h2>
-						<p>최근 블로글</p>
-					</header>
-					<div class="flex flex-2">
-						{% for post in site.categories.blog limit:2 %}
-							<article>
-								<a href="{{ post.url | prepend: site.baseurl }}">
-								<div class="image fit">
-									<img src={{ post.image }} />
-								</div>
-								</a>
-								<header>
-									<h3>{{ post.title }}</h3>
-									<p> {{ post.date | date_to_string }} </p>
-								</header>
-								<p>{{ post.excerpt | strip_html | truncatewords: 20}}</p>
-								<footer>
-									<a href="{{ post.url | prepend: site.baseurl }}" class="button special">More</a>
-								</footer>
-							</article>
-						{% endfor %}
-					</div>
-				</div>
-			</section>
--->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/aos.css">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="mb-0">Diominor</a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+
+								<li><a href="#about-section" class="nav-link">About Me</a></li>
+
+                <li class="has-children">
+                  <a href="/ML.html" class="nav-link">Machine Learning</a>
+                  <ul class="dropdown">
+                    <li><a href="" class="nav-link">RL An Introduction - S.Sutton</a></li>
+                    <li><a href="" class="nav-link">RL Course - D.Silver</a></li>
+                  </ul>
+                </li>
+
+								<li class="has-children">
+                  <a href="/programming.html" class="nav-link">Programming</a>
+                  <ul class="dropdown">
+                    <li><a href="" class="nav-link">Data Structure</a></li>
+                    <li><a href="" class="nav-link">Algorithm</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="/blog.html" class="nav-link">Blog</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+
+    </header>
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url(./images/banner.jpg);" data-aos="fade" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+
+          <div class="col-md-8 mt-lg-5 text-center">
+            <h1 class="text-uppercase mb-5" data-aos="fade-up">Diominor's Repository </h1>
+						<p style="color:gray;" data-aos="fade-up">이것저것저장소</p>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="#about-section" class="mouse smoothscroll">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+      </a>
+    </div>
+
+
+    <div class="site-section cta-big-image" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">About Me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="https://avatars2.githubusercontent.com/u/30210944?s=400&v=4" alt="Image" class="img-fluid">
+            </figure>
+          </div>
+
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3 class="h3 mb-4 text-black">백승열</h3>
+              <p>Team: Unsolved Problem</p>
+							<p>수학, 데이터 사이언스, 강화 학습, 파이썬, 머신러닝, 딥러닝, 유니티(C#), C++, 자바, 게임 개발자</p>
+							<p>Mathematics, Data Science, Reinforcement Learning, Python, Machine Learning, Deep Learning, Unity(C#), C++, Java, Game Developer</p>
+							<p>Hands-on Machine Learning with Scikit-Learn and TensorFlow, First Contact with Tensorflow, Project</p>
+							<p>
+								sy0277@naver.com <br>
+								backgom2357@gmail.com
+							</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
 					<div class="flex">
 						<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Design: <a href="https://templated.co">TEMPLATED</a> & <a href="https://colorlib.com" target="_blank" >Colorlib</a>.
 						</div>
 						<ul class="icons">
 							<li><a href="https://www.facebook.com/The.Back.I.Am" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -134,11 +169,24 @@ title: DearMinor
 				</div>
 			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  </div>
+	<!-- .site-wrap -->
 
-	</body>
+  <script src="{{ site.baseurl }}/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery-ui.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/popper.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/owl.carousel.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.countdown.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.easing.1.3.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/aos.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.fancybox.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.sticky.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/isotope.pkgd.min.js"></script>
+
+  <script src="{{ site.baseurl }}/assets/js/main0.js"></script>
+
+
+
+  </body>
 </html>
