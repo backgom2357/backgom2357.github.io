@@ -1,0 +1,84 @@
+---
+layout: post
+title: 'Highlight11 - 2.8 Gradient Bandit Algorithms <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-09
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 2.8 Gradient Bandit Algorithms
+In this section we consider learning a numerical preference for each action $a$, which we denote $H_t(a)$.
+<br>
+
+The larger the preference, the more often that action is taken, but the preference has no interpretation in terms of reward. Only the relative preference of one actioin over another is important.
+<br>
+
+The action probabilities are determined according to a soft-max distribution(i.e., Gibbs or Boltzmann distribution) as follows:
+
+$$
+Pr\{A_t=a\} \doteq \frac{\exp{H_t(a)}}{\sum_{b=1}^k \exp{H_t(b)}} \doteq \pi_t(a),
+$$
+
+where here we have also introduced a useful new notation, $\pi_t(a)$, for the probability of taking actioin $a$ at time $t$. Initially all action preferences are the same (e.g., $H_1(a)=0$, for all $a$) so that all actions have an equal probability of being selected.
+<br>
+
+There is a natural learning algorithm for this based on the idea of stochastic gradient ascent. On each step, after selecting action $A_t$ and receiving the reward $R_t$, the action preferences are updated by:
+
+$$
+\begin{align}
+  H_{t+1}(A_t) \doteq H_t(A_t) + \alpha (R_t - \bar{R_t})(1-\pi_t(A_t)), && \text{     and}
+\\
+  H_{t+1}(a) \doteq H_t(a) - \alpha (R_t - \bar{R_t})\pi_t(a), && \text{     for all }&  a \neq A_t,
+\end{align}
+$$
+
+where $\alpha > 0$ is a step-size parameter, and $R_t \in \Bbb{R}$ is the average of all the rewards up through and including time $t$, which can be computed incrementally as described in Section 2.4. The $R_t$ term serves as a baseline with which the reward is compared.
+<br>
+
+The following shows results with the gredient bandit algorithm on a variant of the 10-armed testbed in which the true expected rewards were selected according to a normal distribution with a mean of +4 instead of zero. This shifting up has no effect on the gradient bandit algorithm.
+
+
+
+
+<div class="box">
+<h1>The Bandit Gradient Algorithm as Stochastic Gradient Ascent</h1>
+In exact gradient ascent, each action preference $H_t(a)$ would be incremented proportional to the increment's effect on performance:
+
+$$
+H_{t+1}(a) \doteq H_{t}(a) + \alpha \frac{\partial \Bbb{E} [R_t]}{\partial H_t(a)},
+$$
+
+where the measure of performance here is the expected reward:
+
+$$
+\Bbb{E}[R_t] = \sum_x \pi_t(x) q_*(x),
+$$
+
+and the measure of the increment's effect is the partial derivative of this performance measure with respect to the action preference.
+<br>
+
+Of course, it is not possible because we do not know the $q_*(x)$, but in fact the updates of our algorithm are equal to that, making the algorithm an instance of stochastic gradient ascent.
+
+</div>
+
+
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 2 Multi-armed Bandits
+2.1 A k-armed Bandit Problem<br>
+2.2 Action-value Methods<br>
+2.3 The 10-armed Testbed<br>
+2.4 Incremental Implementation<br>
+2.5 Tracking a Nonstationary Problem<br>
+2.6 Optimistic Initial Values<br>
+<b>2.7 Upper-Confidence-Bound Action Selection<br></b>
+2.8 Gradient Bandit Algorithms<br>
+2.9 Associative Search (Contextual Bandits)<br>
+2.10 Summary<br>
