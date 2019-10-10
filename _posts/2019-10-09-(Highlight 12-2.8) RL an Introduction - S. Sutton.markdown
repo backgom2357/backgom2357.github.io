@@ -56,8 +56,58 @@ $$
 and the measure of the increment's effect is the partial derivative of this performance measure with respect to the action preference.
 <br>
 
-Of course, it is not possible because we do not know the $q_*(x)$, but in fact the updates of our algorithm are equal to that, making the algorithm an instance of stochastic gradient ascent.
+Of course, it is not possible because we do not know the $q_*(x)$, but in fact the updates of the gradient bandit algorithm are equal to the upper algorithm, making the algorithm an instance of stochastic gradient ascent.
+<br>
 
+First we take a closer look at the exact performance gradient:
+
+$$
+\begin{align}
+\frac{\partial \Bbb{E} [R_t]}{\partial H_t(a)} & = \frac{\partial}{\partial H_t(a)} \biggl[ \sum_x \pi_t(x) q_*(x) \biggr] \\
+& = \sum_x q_*(x) \frac{\partial \pi_t(x)}{\partial H_t(a)} \\
+& = \sum-x (q_*(x) - B_t) \frac{\partial \pi_t(x)}{\partial H_t(a)},
+\end{align}
+$$
+
+where B_t, called the baseline, can be any scalar that does not depend on x. We can include a baseline here without changing the equaility because the gradient sums to zero over all the actions, $\sum_x \frac{\partial \pi_t(x)}{\partial H_t(a)} = 0$
+<br>
+
+Next we multiply each term of the sum by $\pi_t(x) / \pi_t(x)$:
+
+$$
+\frac{\partial \Bbb{E} [R_t]}{\partial H_t(a)} = \sum-x \pi_t(x) (q_*(x) - B_t) \frac{\partial \pi_t(x)}{\partial H_t(a)} / \pi_t(x).
+$$
+
+The equation is now in the form of an expectation ($ \Bbb{E}[X] \doteq p(x)x, \text{ where } p(x) \doteq Pr\{X=x\} $), summing over all possible values $x$ of the random variable $A_t$, then multiplying by the probability of taking those values. Thus:
+
+$$
+= \Bbb{E} \biggl[ (q_*(A_t)-B_t) \frac{\partial \pi_t(A_t)}{\partial H_t(a)} / \pi_t(A_t)\biggr] \\
+= \Bbb{E} \biggl[ (R_t-\bar{R_t}) \frac{\partial \pi_t(A_t)}{\partial H_t(a)} / \pi_t(A_t)\biggr],
+$$
+
+where here we have chosen the baseline $B_t = \bar{R_t}$ and substituted $R_t$ for $q_*(A_t)$, which is permitted because $\Bbb{E}[R_t|A_t] = q_*(A_t)$. Shortly we will establish that $\frac{\partial \pi_t(x)}{\partial H_t(a)} = \pi_t(x)(\Bbb{1}_{a=x}-\pi_t(a))$, where $\Bbb{1}_{a=x}$ is defined to be $1$ if $a=x$, else $0$. Assuming that for now, we have
+
+$$
+= \Bbb{E} \biggl[ (q_*(A_t)-B_t) \pi_t(A_t)(\Bbb{1}_{a=x}-\pi_t(a)) / \pi_t(A_t)\biggr] \\
+= \Bbb{E} \biggl[ (q_*(A_t)-B_t) (\Bbb{1}_{a=x}-\pi_t(a)) \biggr]
+$$
+
+Substituting a sample of the expectation above for the performance gradient yields:
+
+$$
+H_{t+1}(a) = H_t(a) + \alpha(R_t-\bar{R_t})(\Bbb{1}_{a=A_t} - \pi_t(a)), \text{   for all a}
+$$
+
+Using the standard quotient rule for derivatives, we can show that $\frac{\partial \pi_t(x)}{\partial H_t(a)} = \pi_t(x)(\Bbb{1}_{a=x}-\pi_t(a))$.
+<br>
+
+Note that we did not require any properties of the reward baseline other than that it does not depend on the selected action.
+<br>
+
+The choise of the baseline does not affect the expected update of the algorithm, but it does affect the variance of the update and thus the rate of convergence.
+<br>
+
+Choosing it as the average of the rewards may not be the best, but it is simple and works well in practice.
 </div>
 
 
@@ -78,7 +128,7 @@ Of course, it is not possible because we do not know the $q_*(x)$, but in fact t
 2.4 Incremental Implementation<br>
 2.5 Tracking a Nonstationary Problem<br>
 2.6 Optimistic Initial Values<br>
-<b>2.7 Upper-Confidence-Bound Action Selection<br></b>
-2.8 Gradient Bandit Algorithms<br>
+2.7 Upper-Confidence-Bound Action Selection<br>
+<b>2.8 Gradient Bandit Algorithms<br></b>
 2.9 Associative Search (Contextual Bandits)<br>
 2.10 Summary<br>
