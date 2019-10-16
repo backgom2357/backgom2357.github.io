@@ -1,0 +1,42 @@
+---
+layout: post
+title: 'Highlight14 - 3.2 Goals and Rewards <br> [RL an Introduction - S. Sutton]'
+date: 2019-10-16
+categories: machine_learning
+image: images/RLIntroduction_Sutton.png
+---
+### 3.2 Goals and Rewards
+The purpose or goal of the agent is formalized in terms of a special signal, called the reward, passing from the environment to the agent. The agent's goal is to maximize the total amount of reward it reveives.
+<br>
+
+The reward hypothesis:
+<div class="box">
+That all of what we mean by goals and purposes can be well thought or as the maximization of the expected valueof the cumulative sum of a reveived scalar signal(reward).
+</div>
+
+The use of a reward signal to formalize the idea of a goal is one of the most distinctive features of reinforcement learning.
+<br>
+
+Although formulating goals in terms of reward signals might at first appear limiting, in practice it has proved to be flexible and widely applicable.
+<br>
+
+If we want it to do something for us, we must provide rewards to it in such a way that in maximizing them the agent will also achieve our goals. It is thus critical that the rewards we set up truly indicate what we want accomplished.
+
+
+
+
+<br>
+\-----------------
+
+# Reinforcement Learning an Introduction - Richard S. Sutton
+
+### I Tabular Solution Methods
+#### 3 Finite Markov Decision Processes
+3.1 The Agent–Environment Interface<br>
+<b>3.2 Goals and Rewards<br></b>
+3.3 Returns and Episodes<br>
+3.4 Unified Notation for Episodic and Continuing Tasks<br>
+3.5 Policies and Value Functions<br>
+3.6 Optimal Policies and Optimal Value Functions<br>
+3.7 Optimality and Approximation<br>
+3.8 Summary<br>
