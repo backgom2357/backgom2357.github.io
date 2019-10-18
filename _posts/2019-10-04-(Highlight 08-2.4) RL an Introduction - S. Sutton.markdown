@@ -65,7 +65,7 @@ Loop forever:<br>
   & \text{(breaking ties randomly)} \\
   \text{a random action} & \text{with probability} \epsilon
   \end{cases}
-  $
+  $<br>
   $R \leftarrow bandit(A)$<br>
   $N(A) \leftarrow N(A) + 1$<br>
   $Q(A) \leftarrow Q(A) + \frac{1}{N(A)} [R-Q(A)]$
