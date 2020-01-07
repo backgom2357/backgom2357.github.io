@@ -3,6 +3,7 @@ layout: post
 title:  "python - Heap"
 date:   2019-10-02
 categories: programming
+tags: structure
 ---
 # Heap
 Heap은 여러 값들 중 가장 큰 값이나 가장 작은 값을 빠르게 찾을수 있게 설계된 자료구조다. 즉, 부모 노드의 키 값이 자식 노드의 키 값보다 항상 크거나 작은 이진 트리다.

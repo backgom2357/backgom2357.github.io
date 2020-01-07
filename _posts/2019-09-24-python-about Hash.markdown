@@ -3,6 +3,7 @@ layout: post
 title: 'python-About Hash'
 date: 2019-09-24
 categories: programming
+tags: algorithm
 ---
 # Hashing hash functions
 Hashing의 요점은 데이터의 내용과 저장한 곳의 주소를 연결시킴으로서, 효율적으로 데이터를 관리하는데 있다.

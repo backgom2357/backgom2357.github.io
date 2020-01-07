@@ -3,6 +3,7 @@ layout: post
 title:  "python - Brute-force Search"
 date:   2019-10-14
 categories: programming
+tags: algorithm
 ---
 # Brute-force search
 이 무식한 탐색은 그냥 모든 가능한 후보를 확인하는 기법이다. 그냥 컴퓨터에게 모든것을 맡긴다.

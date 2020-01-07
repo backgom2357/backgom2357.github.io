@@ -3,6 +3,7 @@ layout: post
 title:  "python - Auto-clicker ver 1.0"
 date:   2019-09-05
 categories: programming
+tags: program
 ---
 # Auto clicker
 와우 클래식 대기열이 너무 길어서 접속 미리하려고 정해진 시간되면 자동으로 클릭해주는 프로그램을 만듬

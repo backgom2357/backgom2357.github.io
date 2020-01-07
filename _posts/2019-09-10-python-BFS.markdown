@@ -3,6 +3,7 @@ layout: post
 title:  "python - BFS(Breadth First Search)"
 date:   2019-09-10
 categories: programming
+tags: algorithm
 ---
 # BFS
 BFS!BFS!

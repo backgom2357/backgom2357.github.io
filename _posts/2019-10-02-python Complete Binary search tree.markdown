@@ -3,6 +3,7 @@ layout: post
 title:  "python - Complete Binary Search Tree"
 date:   2019-10-02
 categories: programming
+tags: algorithm
 ---
 # Complete Binary Search Tree
 이진 탐색 트리의 연산은 간단히 구현된다. 하지만 만약 완전 이진 트리의 특성과 이진 탐색트리의 특성이 합쳐진 완전 이진 탐색 트리는 어떻게 만들어야 할까.

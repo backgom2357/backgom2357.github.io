@@ -6,17 +6,17 @@ title: programming
 	<section id="main" class="wrapper">
 		<div class="inner">
 			<header class="align-center">
-				<h2>Programming</h2>
-				<p>프러그램밍</p>
+				<h2>Data Structure</h2>
+				<p>자료구조</p>
 			</header>
 
 		<!-- Post List -->
-		  {% for post in site.categories.programming %}
+		  {% for post in site.tags.structure %}
 				<hr class="major" />
 				<a href="{{ post.url | prepend: site.baseurl }}">
 				  <h2 id='content'>{{ post.title }}</h2>
 				</a>
-				<p><I> {{ post.date | date_to_string }} <br> tags: {{ post.tags }}</I></p>
+				<p><I> {{ post.date | date_to_string }} </I></p>
 				<p> {{ post.excerpt | strip_html | truncatewords: 50 }} </p>
 			{% endfor %}
 		 </div>

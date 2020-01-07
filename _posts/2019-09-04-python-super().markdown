@@ -3,6 +3,7 @@ layout: post
 title:  "python - super()"
 date:   2019-09-04
 categories: programming
+tags: language
 ---
 
 # super()

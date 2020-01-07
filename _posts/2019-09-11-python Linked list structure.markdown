@@ -3,6 +3,7 @@ layout: post
 title:  "python - Inside of Linked List"
 date:   2019-09-10
 categories: programming
+tags: language
 ---
 # Inside of linked List
 Python에서는 Linked list를 직접 클래스로 구현해야되는 것 같다. 근데 구현을 하고나서 입력을 할때

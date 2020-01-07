@@ -3,6 +3,7 @@ layout: post
 title:  "python - Queue"
 date:   2019-09-09
 categories: programming
+tags: structure
 ---
 # Queue
 queue 모듈에 저장되어 있는 클래스들. (maxsize는 해당 클래스가 저장 할 수 있는 최대 아이템 개수)

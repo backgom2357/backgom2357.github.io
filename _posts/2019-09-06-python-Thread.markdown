@@ -3,6 +3,7 @@ layout: post
 title:  "python - Thread"
 date:   2019-09-05
 categories: programming
+tags: language
 ---
 # Thread
 파이썬에선 기본적으로 하나의 Thread에서 실행된다.

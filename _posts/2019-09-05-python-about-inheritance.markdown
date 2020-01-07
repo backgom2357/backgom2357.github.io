@@ -3,6 +3,7 @@ layout: post
 title:  "python - About inheritance 상속에 관하여"
 date:   2019-09-05
 categories: programming
+tags: language
 ---
 # About ingeritance
 Thread 공부를 하다가 상속에 대해 궁금한것이 생겨서 이것저것 해보았다.
