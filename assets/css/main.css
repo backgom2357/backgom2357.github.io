@@ -1760,7 +1760,15 @@
 		@media screen and (max-width: 1280px) {
 
 			.inner {
-				max-width: 90%;
+				max-width: 65%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.inner {
+				max-width: 75%;
 			}
 
 		}
