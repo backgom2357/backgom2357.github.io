@@ -20,7 +20,7 @@
 	  canvas.width = video.videoWidth;
 	  canvas.height = video.videoHeight;
 	  canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
-	    model.load('./tfjs/model.json').then(model => {
+	    model.load('{{ site.baseurl }}/tfjs/model.json').then(model => {
 	      model.classify(canvas).then(predictions => {
 		alert(predictions[0].className + ': ' + predictions[0].probability);
 		console.log(predictions);
