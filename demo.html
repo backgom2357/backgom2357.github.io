@@ -20,7 +20,7 @@
       const PREPROCESS_DIVISOR = tf.scalar(255 / 2);
 
       const url = GOOGLE_CLOUD_STORAGE_DIR+MODEL_FILE_URL;
-      const proxyurl = "https://backgom2357.github.io/demo"; // site that doesn’t send Access-Control-*
+      const proxyurl = "https://cors-anywhere.herokuapp.com/"; // site that doesn’t send Access-Control-*
       fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
       .then(response => response.text())
       .then(contents => console.log(contents))
