@@ -19,8 +19,8 @@
       const OUTPUT_NODE_NAME = 'module_apply_default/MobilenetV2/Logits/output';
       const PREPROCESS_DIVISOR = tf.scalar(255 / 2);
 
-      const proxyurl = GOOGLE_CLOUD_STORAGE_DIR+MODEL_FILE_URL;
-      const url = "https://backgom2357.github.io/demo"; // site that doesn’t send Access-Control-*
+      const url = GOOGLE_CLOUD_STORAGE_DIR+MODEL_FILE_URL;
+      const proxyurl = "https://backgom2357.github.io/demo"; // site that doesn’t send Access-Control-*
       fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
       .then(response => response.text())
       .then(contents => console.log(contents))
