@@ -19,10 +19,12 @@
       const OUTPUT_NODE_NAME = 'module_apply_default/MobilenetV2/Logits/output';
       const PREPROCESS_DIVISOR = tf.scalar(255 / 2);
 
-      fetch('Access-Control-Allow-Origin:'+GOOGLE_CLOUD_STORAGE_DIR + MODEL_FILE_URL)
-        .then(response => response.text())
-        .then(contents => console.log(contents))
-        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
+      const proxyurl = GOOGLE_CLOUD_STORAGE_DIR+MODEL_FILE_URL;
+      const url = "https://backgom2357.github.io/demo"; // site that doesn’t send Access-Control-*
+      fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+      .then(response => response.text())
+      .then(contents => console.log(contents))
+      .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 
       const IMAGENET_CLASSES = {
         0: 'Anger',
