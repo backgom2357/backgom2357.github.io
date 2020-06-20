@@ -12,48 +12,103 @@
     <canvas></canvas>
 
     <script>
-    	video = document.querySelector('video');
-	canvas = document.querySelector('canvas');
-	button = document.querySelector('button');
+      const GOOGLE_CLOUD_STORAGE_DIR =
+          'https://storage.cloud.google.com/dm_demo_bucket_1/';
+      const MODEL_FILE_URL = 'tfjs/model.json';
+      const INPUT_NODE_NAME = 'images';
+      const OUTPUT_NODE_NAME = 'module_apply_default/MobilenetV2/Logits/output';
+      const PREPROCESS_DIVISOR = tf.scalar(255 / 2);
 
-	button.onclick = function() {
-	  canvas.width = video.videoWidth;
-	  canvas.height = video.videoHeight;
-	  canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
-	    model.load('{{ site.baseurl }}/tfjs/model.json').then(model => {
-	      model.classify(canvas).then(predictions => {
-		alert(predictions[0].className + ': ' + predictions[0].probability);
-		console.log(predictions);
-	      });
-	    });
-	};
+      const IMAGENET_CLASSES = {
+        0: 'Anger',
+        1: 'Disgust',
+        2: 'Fear',
+        3: 'Happy',
+        4: 'Sad',
+        5: 'Surprise',
+        6: 'Neutral',
+      };
 
-	constraints = {
-	  audio: false,
-	  video: true
-	};
+      class MobileNet {
+        constructor() {}
 
-	function handleSuccess(stream) {
-	  video.srcObject = stream;
-	}
+        async load() {
+          this.model = await tf.loadGraphModel(GOOGLE_CLOUD_STORAGE_DIR + MODEL_FILE_URL);
+        }
 
-	function handleError(error) {
-	  alert('navigator.MediaDevices.getUserMedia error: ' + error.message + error.name);
-	}
+        dispose() {
+          if (this.model) {
+            this.model.dispose();
+          }
+        }
 
-	navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
+        predict(input) {
+          const preprocessedInput = tf.div(
+              tf.sub(input.asType('float32'), PREPROCESS_DIVISOR),
+              PREPROCESS_DIVISOR);
+          const reshapedInput =
+              preprocessedInput.reshape([1, ...preprocessedInput.shape]);
+          return this.model.execute(
+              {[INPUT_NODE_NAME]: reshapedInput}, OUTPUT_NODE_NAME);
+        }
+
+        getTopKClasses(logits, topK) {
+          const predictions = tf.tidy(() => {
+            return tf.softmax(logits);
+          });
+
+          const values = predictions.dataSync();
+          predictions.dispose();
+
+          let predictionList = [];
+          for (let i = 0; i < values.length; i++) {
+            predictionList.push({value: values[i], index: i});
+          }
+          predictionList = predictionList
+                               .sort((a, b) => {
+                                 return b.value - a.value;
+                               })
+                               .slice(0, topK);
+
+          return predictionList.map(x => {
+            return {label: IMAGENET_CLASSES[x.index], value: x.value};
+          });
+        }
+      }
+
+      mobilenet = new MobileNet();
+      video = document.querySelector('video');
+      canvas = document.querySelector('canvas');
+      button = document.querySelector('button');
+
+      button.onclick = function() {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+          mobilenet.load().then(model => {
+            mobilenet.classify(canvas).then(predictions => {
+          alert(predictions[0].className + ': ' + predictions[0].probability);
+          console.log(predictions);
+            });
+          });
+      };
+
+      constraints = {
+        audio: false,
+        video: true
+      };
+
+      function handleSuccess(stream) {
+        video.srcObject = stream;
+      }
+
+      function handleError(error) {
+        alert('navigator.MediaDevices.getUserMedia error: ' + error.message + error.name);
+      }
+
+      navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
     </script>
 
   </body>
-
-<button>Click me</button>
-<script>
-  alert('Start!');
-  button = document.querySelector('button');
-  function alertClick() {
-    alert('Click!');
-  };
-  button.onclick = alertClick;
-</script>
 
 </html>
