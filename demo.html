@@ -38,9 +38,6 @@
         async load() {
           this.model = await tf.loadGraphModel(
             fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
-                  .then(response => response.text())
-                  .then(contents => console.log(contents))
-                  .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
             );
         }
 
