@@ -19,6 +19,11 @@
       const OUTPUT_NODE_NAME = 'module_apply_default/MobilenetV2/Logits/output';
       const PREPROCESS_DIVISOR = tf.scalar(255 / 2);
 
+      fetch('Access-Control-Allow-Origin:'+GOOGLE_CLOUD_STORAGE_DIR + MODEL_FILE_URL)
+        .then(response => response.text())
+        .then(contents => console.log(contents))
+        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
+
       const IMAGENET_CLASSES = {
         0: 'Anger',
         1: 'Disgust',
