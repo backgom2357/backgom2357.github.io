@@ -37,7 +37,7 @@
 
         async load() {
           this.model = await tf.loadGraphModel(
-            fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+            String(fetch(proxyurl + url))
             );
         }
 
