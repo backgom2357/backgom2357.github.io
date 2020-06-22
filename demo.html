@@ -40,7 +40,7 @@ layout: default
         constructor() {}
 
         async load() {
-          this.model = await tf.loadGraphModel(
+          this.model = await tf.loadLayersModel(
             '{{ site.baseurl }}/tfjs/model.json'
             );
         }
