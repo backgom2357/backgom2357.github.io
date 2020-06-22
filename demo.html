@@ -37,7 +37,7 @@
 
         async load() {
           this.model = await tf.loadGraphModel(
-            String(fetch(proxyurl + url))
+            String(proxyurl + url)
             );
         }
 
