@@ -4,6 +4,7 @@ title: 'Highlight08 - 2.4 Incremental Implementation <br> [RL an Introduction - 
 date: 2019-10-04
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.4 Incremental Implementation
 The action-value methods we have discussed so far all estimate action values as sample averages of observed rewards. We now turn to the question of how these averages can be computed in a computationally efficient manner, in particular, with constant memory and constant per-time-step computation.

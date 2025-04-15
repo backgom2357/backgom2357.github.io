@@ -4,6 +4,7 @@ title: 'Highlight11 - 2.8 Gradient Bandit Algorithms <br> [RL an Introduction - 
 date: 2019-10-09
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.8 Gradient Bandit Algorithms
 In this section we consider learning a numerical preference for each action $a$, which we denote $H_t(a)$.

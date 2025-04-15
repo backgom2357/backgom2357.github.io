@@ -4,6 +4,7 @@ title: 'Highlight13 - 3.1 The Agent-Environment Interface <br> [RL an Introducti
 date: 2019-10-16
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ## Chapter 3 Finite Markov Decision
 In this chapter we introduce the formal problem of finite Markov decision process, or finite MDPs. MDPs are a classical formalization of sequential decision making, where actions influence not just immediate rewards, but also subsequent situations, or state, and through those future rewards. In MDPs we estimate the value $ q_{\ast}(s,a) $ of each action $a$ in each state $s$, or we estimate the value $v_{\ast}(s)$ of each state given optimal action selections.

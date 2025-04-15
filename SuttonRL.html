@@ -1,0 +1,23 @@
+---
+layout: default
+title: machine learning
+---
+<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h2>RL an Introduction</h2>
+				<p>RL an Introduction</p>
+			</header>
+
+		<!-- Post List -->
+			{% for post in site.tags.RLIntroduction %}
+				<hr class="major" />
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<h2 id='content'>{{ post.title }}</h2>
+				</a>
+				<p><I> {{ post.date | date_to_string }} </I></p>
+				<p> {{ post.excerpt | strip_html | truncatewords: 50 }} </p>
+			{% endfor %}
+		</div>
+	</section>

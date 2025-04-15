@@ -4,6 +4,7 @@ title: 'Highlight12 - 2.9 Associative Search (Contextual Bandits) <br> 2.10 Summ
 date: 2019-10-10
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.9 Associative Search (Contextual Bandits)
 So far in this chapter we have considered only nonassociative tasks, that is, tasks in which there is no need to associate different actions with different situations.

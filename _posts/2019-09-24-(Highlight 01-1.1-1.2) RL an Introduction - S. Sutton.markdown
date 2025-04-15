@@ -4,6 +4,7 @@ title:  "Highlight01 - 1.1 Reinforcement Learning, 1.2 Examples <br> [RL an Intr
 date:   2019-09-24
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ## Chapter 1. Introduction
 ### 1.1 Reinforcement Learning

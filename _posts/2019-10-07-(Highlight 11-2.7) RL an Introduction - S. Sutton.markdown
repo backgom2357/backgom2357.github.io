@@ -4,6 +4,7 @@ title: 'Highlight11 - 2.7 Upper-Confidence-Bound Action Selection <br> [RL an In
 date: 2019-10-07
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.7 Upper-Confidence-Bound Action Selection
 Exploration is needed because there is always uncertainty about the accuracy of the action-value estimates.

@@ -4,6 +4,7 @@ title: 'Highlight09 - 2.5 Tracking a Nonstationary Problem <br> [RL an Introduct
 date: 2019-10-04
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.5 Tracking a Nonstationary Problem
 The averaging methods discussed so far are appropriate for stationary bandit problems, that is, for bandit problems in which the reward probabilities do not change over time.

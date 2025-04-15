@@ -4,6 +4,7 @@ title: 'Highlight14 - 3.2 Goals and Rewards <br> [RL an Introduction - S. Sutton
 date: 2019-10-16
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 3.2 Goals and Rewards
 The purpose or goal of the agent is formalized in terms of a special signal, called the reward, passing from the environment to the agent. The agent's goal is to maximize the total amount of reward it reveives.

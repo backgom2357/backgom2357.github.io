@@ -4,6 +4,7 @@ title: 'Highlight00 - Contents <br> [RL an Introduction - S. Sutton]'
 date: 2019-09-24
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 
 # Reinforcement Learning an Introduction - Richard S. Sutton

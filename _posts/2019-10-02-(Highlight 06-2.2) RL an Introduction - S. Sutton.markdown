@@ -4,6 +4,7 @@ title: 'Highlight06 - 2.2 Action-value Methods <br> [RL an Introduction - S. Sut
 date: 2019-10-02
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.2 Action-value Methods
 We begin by looking more closely at methods for estimating the values of actions and for using the estimates to make action selection decisions, which we collectively call action-value methods. Recall that the true value of an action is the mean reward when that action is selected. One natural way to estimate this is by averaging the rewards actually received:

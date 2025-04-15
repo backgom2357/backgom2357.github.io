@@ -4,6 +4,7 @@ title: 'Highlight02 - 1.3 Elements of Reinforcement Learning <br> [RL an Introdu
 date: 2019-09-25
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 1.3 Elements of Reinforcement Learning
 Beyond the agent and the environment, one can identify four main subelements of a reinforcement learning system:

@@ -4,6 +4,7 @@ title: 'Highlight05 - 2.1 k-armed Bandit Problem <br> [RL an Introduction - S. S
 date: 2019-09-30
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ## Part I: Tabular Solution Methods
 In this part of the book we describe almost all the core ideas of reinforcement learning algorithms in their simplest forms: that in which the state and action spaces are small enough for the approximate value functions to be represented as arrays, or tables.

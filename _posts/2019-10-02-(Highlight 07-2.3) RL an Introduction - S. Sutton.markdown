@@ -4,6 +4,7 @@ title: 'Highlight07 - 2.3 The 10-armed Testbed <br> [RL an Introduction - S. Sut
 date: 2019-10-02
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.3 The 10-armed Testbed
 To roughly assess the relative effectiveness of the greedy and $\epsilon$-greedy action-value methods, we compared them numerically on a suite of thest problems. This was a set of 2000 randomly generated $k$-armed bandit problems with $k$ = 10.

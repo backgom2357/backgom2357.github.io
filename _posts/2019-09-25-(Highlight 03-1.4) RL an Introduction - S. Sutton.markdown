@@ -4,6 +4,7 @@ title: 'Highlight03 - 1.4 Limitations and Scope <br> [RL an Introduction - S. Su
 date: 2019-09-25
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 1.4 Limitations and Scope
 Reinforcement learning relies heavily on the concept of state -- as input to the policy and value function, and as both input to and output from the model.

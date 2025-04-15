@@ -4,6 +4,7 @@ title: 'Highlight10 - 2.6 Optimistic Initial Values <br> [RL an Introduction - S
 date: 2019-10-07
 categories: machine_learning
 image: images/RLIntroduction_Sutton.png
+tag: RLIntroduction
 ---
 ### 2.6 Optimistic Initial Values
 All the methods we have discussed so far are dependent to some extent on the initial action-value estimates, $Q_1(a)$. In the language of statistics, these methods are biased by their initial estimates.

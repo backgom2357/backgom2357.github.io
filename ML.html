@@ -10,12 +10,14 @@ title: machine learning
 				<p>메씐 레닝</p>
 			</header>
 
-			<!-- Post List -->
-			  {% for post in site.categories.machine_learning %}
-					<hr class="major" />
-					<a href="{{ post.url | prepend: site.baseurl }}">
-					  <h2 id='content'>{{ post.title }}</h2>
-					</a>
-					<p><I> {{ post.date | date_to_string }} </I></p>
-					<p> {{ post.excerpt | strip_html | truncatewords: 50 }} </p>
-				{% endfor %}
+		<!-- Post List -->
+			{% for post in site.categories.machine_learning %}
+				<hr class="major" />
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<h2 id='content'>{{ post.title }}</h2>
+				</a>
+				<p><I> {{ post.date | date_to_string }} </I></p>
+				<p> {{ post.excerpt | strip_html | truncatewords: 50 }} </p>
+			{% endfor %}
+		</div>
+	</section>
