@@ -6,51 +6,47 @@ categories: modeling
 tags: blender
 ---
 
-좋아요! Blender에서 모델링과 리깅을 잘 조작하기 위한 치트시트를 정리해볼게요. 핵심 단축키, 유용한 팁, 워크플로우에 도움 되는 기능들을 중심으로 구성해서 곧 보여드릴게요.
-
-# Blender 모델링 & 리깅 효율적인 워크플로우 치트시트
-
 ## 모델링 관련 핵심 단축키
 모델링 시 자주 사용하는 **오브젝트 모드**와 **편집 모드(Edit Mode)**의 주요 단축키입니다. 오브젝트 모드에서는 주로 객체의 이동/복사 등 **전체 객체 조작**을 하고, 편집 모드에서는 **메시 세부 편집**을 수행합니다.
 
 ### 오브젝트 모드 주요 단축키
 | 단축키 (오브젝트 모드) | 기능 설명 |
 | --- | --- |
-| G / R / S | **이동(Grab)** / **회전(Rotate)** / **크기 조절(Scale)** – 선택한 오브젝트를 이동/회전/스케일 조절합니다 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=W%20%EC%84%A0%ED%83%9D%20G%20%EC%9D%B4%EB%8F%99%20R,%ED%9A%8C%EC%A0%84%20S%20%EC%8A%A4%EC%BC%80%EC%9D%BC)). |
+| G / R / S | **이동(Grab)** / **회전(Rotate)** / **크기 조절(Scale)** – 선택한 오브젝트를 이동/회전/스케일 조절합니다. |
 | X 또는 Delete | **삭제** – 선택한 오브젝트를 삭제 (삭제 옵션 메뉴 표시). |
-| Shift + D | **복제** – 선택 오브젝트를 동일한 객체로 복사합니다 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%B3%B8%EC%A1%B0%EC%9E%91%20Shift%20A%20%EB%A7%A4%EC%89%AC,ray%20%EB%AA%A8%EB%93%9C)). |
-| Alt + D | **링크 복사** – 인스턴스 복제 (데이터를 공유하는 복사본 생성) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Shift%20D%20%EB%B3%B5%EC%82%AC%20Alt%20Z,%EB%AA%A8%EB%93%9C%20Alt%20D%20%EB%A7%81%ED%81%AC%20%EB%B3%B5%EC%82%AC)). |
-| Shift + A | **새 객체 추가** – 메쉬 등 새 오브젝트를 추가합니다 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%B3%B8%EC%A1%B0%EC%9E%91%20Shift%20A%20%EB%A7%A4%EC%89%AC,ray%20%EB%AA%A8%EB%93%9C)). |
-| Ctrl + J | **객체 결합** – 여러 오브젝트를 하나로 합칩니다 (메쉬 오브젝트의 경우 버텍스 데이터가 합쳐짐) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Alt%20O%20%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C%EB%B3%80%EA%B2%BD%20Alt%20H,%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EC%83%81%EC%86%8D%20Ctrl%20J%20%ED%95%A9%EC%B9%98%EA%B8%B0)). |
-| Ctrl + P | **부모 설정(페어런팅)** – 선택 순서 마지막 오브젝트를 부모로 설정. 예를 들어 메쉬 -> 아마추어 순으로 선택 후 **자동 가중치로 부모 지정**하면 리깅에 사용 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Alt%20O%20%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C%EB%B3%80%EA%B2%BD%20Alt%20H,%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EC%83%81%EC%86%8D%20Ctrl%20J%20%ED%95%A9%EC%B9%98%EA%B8%B0)). |
-| Alt + P | **부모 해제** – 부모 관계를 제거합니다 (옵션: 변환 유지/초기화) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Shift%20D%20%EB%B3%B5%EC%82%AC%20Alt%20Z,Alt%20P%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EC%83%81%EC%86%8D%20%ED%95%B4%EC%A0%9C)). |
-| H / Alt + H | **숨기기/숨긴 것 모두 표시** – 선택된 오브젝트를 뷰포트에서 숨기거나(H), 숨겨진 객체를 모두 표시(Alt+H) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=M%20%EA%B7%B8%EB%A3%B9%20O%20%EB%B9%84%EB%A1%80%20%ED%8E%B8%EC%A7%91,H%20%EC%88%A8%EA%B8%B0%EA%B8%B0%20Q%20%ED%80%B5%20%EB%A9%94%EB%89%B4)) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Alt%20D%20%EB%A7%81%ED%81%AC%20%EB%B3%B5%EC%82%AC%20Alt,%ED%8E%B8%EC%A7%91%EB%AA%A8%EB%93%9C%EB%B3%80%EA%B2%BD%20Alt%20H%20%EB%AA%A8%EB%93%A0%20%EB%B3%B4%EC%9D%B4%EA%B8%B0)). |
-| M | **컬렉션으로 이동** – 선택 객체를 지정한 컬렉션(그룹 비슷한 개념)으로 이동. (단축키 M은 2.8+에서 **그룹** 대신 컬렉션 이동 기능) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=T%20%ED%86%A0%EA%B8%80%20%EB%A9%94%EB%89%B4%20on%2Foff%20M,O%20%EB%B9%84%EB%A1%80%20%ED%8E%B8%EC%A7%91%20H%20%EC%88%A8%EA%B8%B0%EA%B8%B0)). |
-| N / T | **사이드바 토글(N)** / **툴바 토글(T)** – 화면 우측 속성 사이드바(N)와 좌측 도구 툴바(T)를 보여주거나 숨깁니다 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=R%20%ED%9A%8C%EC%A0%84%20S%20%EC%8A%A4%EC%BC%80%EC%9D%BC%20N,%ED%86%A0%EA%B8%80%20%EB%A9%94%EB%89%B4%20on%2Foff%20M%20%EA%B7%B8%EB%A3%B9)) ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94%20%EC%97%B4%EA%B8%B0%3A%20N)). |
-| / (넘버패드) | **로컬 뷰 토글** – 선택한 오브젝트만 보기/복귀 (격리 뷰) ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=%ED%98%84%EC%9E%AC%EC%99%80%20180%C2%BA%20%EB%B0%98%EB%8C%80%20%EB%B7%B0%20Num,%EC%83%81%ED%83%9C%EC%97%90%EC%84%9C%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EC%A0%9C%EC%99%B8%20M)). |
-| Ctrl + Alt + Q | **쿼드 뷰** – 화면을 4분할 뷰(Top/Front/Right/Camera)로 전환/토글 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=%EB%B7%B0%ED%8F%AC%ED%8A%B8%20%EB%8B%A8%EC%B6%95%ED%82%A4%20%EB%8B%A8%EC%B6%95%ED%82%A4%20%ED%99%94%EB%A9%B4%C2%A04%EB%B6%84%ED%95%A0%EB%A1%9C%C2%A0%EB%B3%B4%EA%B8%B0%20Ctrl,Perspective%20%2F%20Othographic%20Num%205)). |
+| Shift + D | **복제** – 선택 오브젝트를 동일한 객체로 복사합니다. |
+| Alt + D | **링크 복사** – 인스턴스 복제 (데이터를 공유하는 복사본 생성). |
+| Shift + A | **새 객체 추가** – 메쉬 등 새 오브젝트를 추가합니다. |
+| Ctrl + J | **객체 결합** – 여러 오브젝트를 하나로 합칩니다 (메쉬 오브젝트의 경우 버텍스 데이터가 합쳐짐). |
+| Ctrl + P | **부모 설정(페어런팅)** – 선택 순서 마지막 오브젝트를 부모로 설정. 예를 들어 메쉬 -> 아마추어 순으로 선택 후 **자동 가중치로 부모 지정**하면 리깅에 사용. |
+| Alt + P | **부모 해제** – 부모 관계를 제거합니다 (옵션: 변환 유지/초기화). |
+| H / Alt + H | **숨기기/숨긴 것 모두 표시** – 선택된 오브젝트를 뷰포트에서 숨기거나(H), 숨겨진 객체를 모두 표시(Alt+H). |
+| M | **컬렉션으로 이동** – 선택 객체를 지정한 컬렉션(그룹 비슷한 개념)으로 이동. (단축키 M은 2.8+에서 **그룹** 대신 컬렉션 이동 기능). |
+| N / T | **사이드바 토글(N)** / **툴바 토글(T)** – 화면 우측 속성 사이드바(N)와 좌측 도구 툴바(T)를 보여주거나 숨깁니다. |
+| / (넘버패드) | **로컬 뷰 토글** – 선택한 오브젝트만 보기/복귀 (격리 뷰). |
+| Ctrl + Alt + Q | **쿼드 뷰** – 화면을 4분할 뷰(Top/Front/Right/Camera)로 전환/토글. |
 
 ### 편집 모드 주요 단축키 (메시 편집)
 | 단축키 (Edit Mode) | 기능 설명 |
 | --- | --- |
-| Tab | **편집 모드 전환** – 오브젝트 모드 <-> 편집 모드 간 전환 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%ED%8E%B8%EC%A7%91%20%EB%AA%A8%EB%93%9C%2F%EB%AA%A8%EB%8D%B8%EB%A7%81%20Tap%20%ED%8E%B8%EC%A7%91%20%EB%AA%A8%EB%93%9C,3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D)). (선택한 오브젝트의 모드 진입/해제) |
-| 1 / 2 / 3 | **버텍스/에지/페이스 선택 모드** – 상단 메뉴의 점(1), 선(2), 면(3) 선택 모드를 단축키로 전환 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Tap%20%ED%8E%B8%EC%A7%91%20%EB%AA%A8%EB%93%9C%20%EC%A0%84%ED%99%98%202,3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D)). |
-| A / Alt + A | **전체 선택/해제** – A 한 번 누르면 모두 선택, 다시 누르거나 Alt+A로 모두 선택 해제 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=,%ED%95%B4%EC%A0%9C%EB%8A%94%20AA%20%EB%98%90%EB%8A%94%20Alt%2BA)). |
-| B / C | **박스 선택(B)** / **원형 브러쉬 선택(C)** – 드래그하여 박스 영역으로 선택하거나 원형 브러쉬로 다중 선택 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D,%EB%B2%84%ED%85%8D%EC%8A%A4%20%EC%BB%A4%EB%84%A5%ED%8A%B8%20C%20%EC%9B%90%ED%98%95%20%EC%84%A0%ED%83%9D)). Esc나 우클릭으로 선택 종료. |
-| L | **링크된 요소 선택** – 현재 선택한 요소와 연결된 모든 지오메트리를 한번에 선택 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D,%EB%B2%84%ED%85%8D%EC%8A%A4%20%EC%BB%A4%EB%84%A5%ED%8A%B8%20C%20%EC%9B%90%ED%98%95%20%EC%84%A0%ED%83%9D)). (예: 떨어진 별도 메쉬 조각 전체 선택) |
-| Alt + 좌클릭 | **루프 선택** – 가장 가까운 에지 루프나 페이스 루프를 한꺼번에 선택 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EB%A1%9C%EC%BB%AC%EB%B7%B0%3A%C2%A0%2F%20,%EC%9E%91%EC%97%85)). (Shift+Alt+클릭으로 추가 선택) |
-| E | **익스트루드(Extrude) 돌출** – 선택한 면/엣지/버텍스를 그대로 늘려 새로운 면을 생성하며 돌출 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=I%20%EC%82%BD%EC%9E%85%20A%20%EC%A0%84%EC%B2%B4%20%EC%84%A0%ED%83%9D,E%20%EB%8F%8C%EC%B6%9C%20F%20%EB%A9%B4%20%EC%B1%84%EC%9A%B0%EA%B8%B0)). (단축키 후 마우스 이동으로 방향 지정 ([Doc:2.6/Manual/Rigging/Armatures/Editing/Bones - wiki](https://wiki.blender.jp/Doc:2.6/Manual/Rigging/Armatures/Editing/Bones#:~:text=Doc%3A2.6%2FManual%2FRigging%2FArmatures%2FEditing%2FBones%20,a))) |
-| Ctrl + R | **루프 컷 & 슬라이드** – 메시에 루프 단위로 새로운 에지를 삽입 (미리보기 위치 결정 후 클릭, 바로 마우스 이동하여 슬라이드) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=P%20%EA%B0%9C%EC%B2%B4%20%EC%B6%94%EA%B0%80%20%EC%83%9D%EC%84%B1%20Ctrl,%EC%82%BC%EA%B0%81%ED%98%95%20%EB%82%98%EB%88%84%EA%B8%B0%20Ctrl%20R%20%EC%9E%90%EB%A5%B4%EA%B8%B0)). |
-| K | **나이프 툴** – 임의로 면을 자르는 **컷(tool)** 모드로 전환. 클릭하여 새 점을 찍고 Enter로 절단 확정 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%ED%8E%B8%EC%A7%91%20%EB%AA%A8%EB%93%9C%2F%EB%AA%A8%EB%8D%B8%EB%A7%81%20K%20%EC%9E%90%EB%A5%B4%EA%B8%B0%20Y,%EB%B6%84%EB%A6%AC%20P%20%EA%B0%9C%EC%B2%B4%20%EC%B6%94%EA%B0%80%20%EC%83%9D%EC%84%B1)). |
-| Ctrl + B | **베벨(Bevel)** – 선택된 엣지/버텍스에 챔퍼(모따기)를 적용 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=Ctrl%20T%20%EC%82%BC%EA%B0%81%ED%98%95%20%EB%82%98%EB%88%84%EA%B8%B0%20Ctrl,%EB%A9%B4%20%EC%B1%84%EC%9A%B0%EA%B8%B0%20Ctrl%20B%20%EB%B2%A0%EB%B2%A8)). 마우스 드래그로 크기 조절, 숫자 입력 또는 마우스 휠로 분할 세그먼트 조절. |
-| I | **인셋(Inset)** – 선택 면을 안쪽으로 삽입하여 테두리 면을 생성 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D%20L%20%EB%A7%88%ED%81%AC%EB%90%9C,I%20%EC%82%BD%EC%9E%85%20A%20%EC%A0%84%EC%B2%B4%20%EC%84%A0%ED%83%9D)). 드래그로 크기 지정. |
-| F | **면 채우기** – 선택한 점이나 엣지들을 연결하여 면을 생성 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=A%20%EC%A0%84%EC%B2%B4%20%EC%84%A0%ED%83%9D%20E%20%EB%8F%8C%EC%B6%9C,F%20%EB%A9%B4%20%EC%B1%84%EC%9A%B0%EA%B8%B0)). (예: 가장자리 4개 점 선택 후 F 누르면 사각형 면 생성) |
-| J | **버텍스 연결** – 동일 면 내의 두 버텍스를 연결하여 내부 에지 생성 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D,%EB%B2%84%ED%85%8D%EC%8A%A4%20%EC%BB%A4%EB%84%A5%ED%8A%B8%20C%20%EC%9B%90%ED%98%95%20%EC%84%A0%ED%83%9D)). (복잡한 면을 삼각/사각형 등으로 분할) |
-| M (Alt + M) | **버텍스 병합** – **Alt+M** 단축키로 병합 메뉴 실행 ([Vertex Tools — Blender Manual](https://docs.blender.org/manual/en/2.81/modeling/meshes/editing/vertices.html#:~:text=Merging%20Vertices%C2%B6,merge%20all%20selected%20vertices)). 여러 버텍스를 **한 점으로 합치기** (선택 지점, 중앙 등 옵션 선택 가능). |
-| X 또는 Delete | **삭제/해체** – 선택 요소를 삭제합니다. 버텍스, 에지, 페이스별 삭제 또는 **해체(Dissolve)** 옵션으로 형상은 유지하고 요소만 제거 가능 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=C%20%3A%20%EB%88%84%EB%A5%B4%EB%A9%B4%20%EB%B3%B4%EC%9D%B4%EC%A7%80%20%EC%95%8A%EB%8A%94,Shift%20%3A%20%EC%8A%A4%EB%83%85%20%EB%AC%B4%EC%8B%9C)). |
-| Ctrl + T | **삼각화(Triangulate)** – 면을 삼각형들로 분할합니다 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=P%20%EA%B0%9C%EC%B2%B4%20%EC%B6%94%EA%B0%80%20%EC%83%9D%EC%84%B1%20Ctrl,%EC%82%BC%EA%B0%81%ED%98%95%20%EB%82%98%EB%88%84%EA%B8%B0%20Ctrl%20R%20%EC%9E%90%EB%A5%B4%EA%B8%B0)). n-gon 해결이나 게임용 메시 변환 등에 사용. |
-| Y / P | **분리(Split)/분리해서 새 오브젝트로** – Y: 선택 요소를 주변과 분리(여전히 동일 객체 내)<br>**P**: 선택한 요소를 떼어내 **새 오브젝트로 분리** ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%ED%8E%B8%EC%A7%91%20%EB%AA%A8%EB%93%9C%2F%EB%AA%A8%EB%8D%B8%EB%A7%81%20K%20%EC%9E%90%EB%A5%B4%EA%B8%B0%20Y,%EC%83%9D%EC%84%B1%20Ctrl%20I%20%EB%B0%98%EC%A0%84%20%EC%84%A0%ED%83%9D)). (메시 일부를 별도 오브젝트로 만들 때 사용) |
-| O | **비례 편집 토글** – **Proportional Editing** 활성/비활성 전환. 켜면 선택 요소 변형 시 주변까지 함께 부드럽게 변형 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=T%20%ED%86%A0%EA%B8%80%20%EB%A9%94%EB%89%B4%20on%2Foff%20M,O%20%EB%B9%84%EB%A1%80%20%ED%8E%B8%EC%A7%91%20H%20%EC%88%A8%EA%B8%B0%EA%B8%B0)). (편집 모드 상단의 동글 버튼과 동일) |
+| Tab | **편집 모드 전환** – 오브젝트 모드 <-> 편집 모드 간 전환. (선택한 오브젝트의 모드 진입/해제) |
+| 1 / 2 / 3 | **버텍스/에지/페이스 선택 모드** – 상단 메뉴의 점(1), 선(2), 면(3) 선택 모드를 단축키로 전환. |
+| A / Alt + A | **전체 선택/해제** – A 한 번 누르면 모두 선택, 다시 누르거나 Alt+A로 모두 선택 해제. |
+| B / C | **박스 선택(B)** / **원형 브러쉬 선택(C)** – 드래그하여 박스 영역으로 선택하거나 원형 브러쉬로 다중 선택. Esc나 우클릭으로 선택 종료. |
+| L | **링크된 요소 선택** – 현재 선택한 요소와 연결된 모든 지오메트리를 한번에 선택. (예: 떨어진 별도 메쉬 조각 전체 선택) |
+| Alt + 좌클릭 | **루프 선택** – 가장 가까운 에지 루프나 페이스 루프를 한꺼번에 선택. (Shift+Alt+클릭으로 추가 선택) |
+| E | **익스트루드(Extrude) 돌출** – 선택한 면/엣지/버텍스를 그대로 늘려 새로운 면을 생성하며 돌출. (단축키 후 마우스 이동으로 방향 지정) |
+| Ctrl + R | **루프 컷 & 슬라이드** – 메시에 루프 단위로 새로운 에지를 삽입 (미리보기 위치 결정 후 클릭, 바로 마우스 이동하여 슬라이드). |
+| K | **나이프 툴** – 임의로 면을 자르는 **컷(tool)** 모드로 전환. 클릭하여 새 점을 찍고 Enter로 절단 확정. |
+| Ctrl + B | **베벨(Bevel)** – 선택된 엣지/버텍스에 챔퍼(모따기)를 적용. 마우스 드래그로 크기 조절, 숫자 입력 또는 마우스 휠로 분할 세그먼트 조절. |
+| I | **인셋(Inset)** – 선택 면을 안쪽으로 삽입하여 테두리 면을 생성. 드래그로 크기 지정. |
+| F | **면 채우기** – 선택한 점이나 엣지들을 연결하여 면을 생성. (예: 가장자리 4개 점 선택 후 F 누르면 사각형 면 생성) |
+| J | **버텍스 연결** – 동일 면 내의 두 버텍스를 연결하여 내부 에지 생성. (복잡한 면을 삼각/사각형 등으로 분할) |
+| M (Alt + M) | **버텍스 병합** – **Alt+M** 단축키로 병합 메뉴 실행. 여러 버텍스를 **한 점으로 합치기** (선택 지점, 중앙 등 옵션 선택 가능). |
+| X 또는 Delete | **삭제/해체** – 선택 요소를 삭제합니다. 버텍스, 에지, 페이스별 삭제 또는 **해체(Dissolve)** 옵션으로 형상은 유지하고 요소만 제거 가능. |
+| Ctrl + T | **삼각화(Triangulate)** – 면을 삼각형들로 분할합니다. n-gon 해결이나 게임용 메시 변환 등에 사용. |
+| Y / P | **분리(Split)/분리해서 새 오브젝트로** – Y: 선택 요소를 주변과 분리(여전히 동일 객체 내)<br>**P**: 선택한 요소를 떼어내 **새 오브젝트로 분리**. (메시 일부를 별도 오브젝트로 만들 때 사용) |
+| O | **비례 편집 토글** – **Proportional Editing** 활성/비활성 전환. 켜면 선택 요소 변형 시 주변까지 함께 부드럽게 변형. (편집 모드 상단의 동글 버튼과 동일) |
 
 ## 리깅 관련 핵심 단축키 및 필수 기능
 리깅(Rigging)은 **본(Armature 오브젝트)**을 사용해 모델에 **뼈대를 설정하고 가중치(Weight)**로 메쉬 변형을 제어하는 과정입니다. 아래는 **아마추어 추가/편집**, **웨이트 페인팅**, **포즈 모드** 등 리깅 작업의 핵심 단축키와 기능들입니다.
@@ -60,21 +56,21 @@ tags: blender
 | --- | --- |
 | Shift + A > Armature | **아마추어 추가** – 새 Armature 오브젝트(기본 단일 Bone)를 추가합니다. (보이지 않을 경우 우측 뼈대 속성에서 **In Front** 옵션 활성으로 X-Ray 표시 권장) |
 | Tab (아마추어) | **본 편집 모드** – Armature를 편집 모드로 전환하여 본(Bone)의 구조 편집. (메쉬와 달리 **포즈 모드**는 별도로 존재) |
-| E (본 Edit) | **본 Extrude** – 선택한 Bone의 끝부분에서 새 Bone을 이어서 만듭니다 ([Doc:2.6/Manual/Rigging/Armatures/Editing/Bones - wiki](https://wiki.blender.jp/Doc:2.6/Manual/Rigging/Armatures/Editing/Bones#:~:text=Doc%3A2.6%2FManual%2FRigging%2FArmatures%2FEditing%2FBones%20,a)). (연속 Extrude로 본 체인을 손쉽게 생성) |
+| E (본 Edit) | **본 Extrude** – 선택한 Bone의 끝부분에서 새 Bone을 이어서 만듭니다. (연속 Extrude로 본 체인을 손쉽게 생성) |
 | W (본 Edit) | **서브디바이드 본** – 오른쪽 클릭 메뉴 또는 단축키로 본을 두 개로 분할. (본 길이를 절반씩 나누어 중간 관절 생성) |
-| Ctrl + Tab | **포즈 모드 진입** – 선택한 Armature를 **Pose Mode(포즈 모드)**로 전환 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%20Ctrl%20Tab%20%ED%8F%AC%EC%A6%88%20%EB%AA%A8%EB%93%9C,%EC%B6%94%EA%B0%80%20Alt%20K%20%ED%82%A4%EC%9E%89%20%EC%A0%9C%EA%B1%B0)). (본을 회전/이동하여 포즈를 잡고 애니메이션에 활용) |
+| Ctrl + Tab | **포즈 모드 진입** – 선택한 Armature를 **Pose Mode(포즈 모드)**로 전환. (본을 회전/이동하여 포즈를 잡고 애니메이션에 활용) |
 | G / R / S (포즈) | **본 이동/회전/스케일** – 포즈 모드에서 본을 이동/회전/크기 변경하여 모델의 포즈를 조정합니다. (기본적으로 끝부분 선택시 회전이 적용되며, IK 등 제어 추가 가능) |
-| Alt + G / Alt + R / Alt + S | **포즈 초기화** – 선택한 Bone의 위치/회전/스케일을 리셋하여 **기본자세(Rest Pose)**로 되돌립니다 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EC%9D%B4%EB%8F%99%3A%C2%A0G%20%EC%9E%90%EC%9C%A0%EB%A1%9C%EC%9A%B4%20%EC%98%81%ED%98%BC)). (전신 초기화는 모든 본 A 선택 후 Alt+G/Alt+R) |
+| Alt + G / Alt + R / Alt + S | **포즈 초기화** – 선택한 Bone의 위치/회전/스케일을 리셋하여 **기본자세(Rest Pose)**로 되돌립니다. (전신 초기화는 모든 본 A 선택 후 Alt+G/Alt+R) |
 | Ctrl + P (메쉬-본) | **본에 메쉬 붙이기** – 메쉬 -> Armature 순으로 선택 후 **Ctrl+P** → *“자동 가중치로 부모”*를 선택하면, 본에 따라 변형되도록 **본-메쉬 결합(스킨)**됩니다. (Armature Modifier가 자동 추가되어 **Weight Paint** 준비 완료) |
-| Ctrl + Shift + C | **본 제약 추가** – 포즈 모드에서 **Ctrl+Shift+C**를 누르면 선택 본에 대한 **제약(Constraint)** 추가 메뉴가 열립니다 ([Blender Institute Podcast #008 - BlenRig – Blog — Blender Studio](https://studio.blender.org/blog/blender-institute-podcast-008-blenrig/#:~:text=Blender%20Institute%20Podcast%20%23008%20,we%20have%20a%20most)). (현재 선택한 대상이나 마지막 선택한 오브젝트를 자동 타겟으로 설정하여, IK 등 다양한 제약을 빠르게 적용 가능) |
+| Ctrl + Shift + C | **본 제약 추가** – 포즈 모드에서 **Ctrl+Shift+C**를 누르면 선택 본에 대한 **제약(Constraint)** 추가 메뉴가 열립니다. (현재 선택한 대상이나 마지막 선택한 오브젝트를 자동 타겟으로 설정하여, IK 등 다양한 제약을 빠르게 적용 가능) |
 
 ### Weight Paint 모드 (가중치 페인트)
 | 단축키 (Weight Paint) | 기능 설명 |
 | --- | --- |
 | Ctrl + Tab (또는 모드 메뉴) | **Weight Paint 모드 진입** – 메쉬 오브젝트를 Weight Paint 모드로 전환하여 본 영향도를 칠합니다. (또는 *Ctrl+Tab* 모드 메뉴 통해 직접 진입) |
-| Ctrl + 좌클릭 (Blender < 4.0) <br>Alt + 좌클릭 (Blender ≥ 4.0) | **본 선택 (Weight Paint 중)** – Weight Paint 모드에서 특정 Bone의 가중치를 칠하려면 해당 본을 **선택**해야 합니다. Blender 4.0부터는 *Alt+좌클릭*으로 본 선택 (이전 버전은 *Ctrl+좌클릭*) ([Select bones in weight paint mode with Blender 4 - Talk - GameDev.tv](https://community.gamedev.tv/t/select-bones-in-weight-paint-mode-with-blender-4/239810#:~:text=Select%20bones%20in%20weight%20paint,as%20described%20in%20the%20lesson)). 선택한 본에 현재 Weight 브러시가 할당됩니다. |
-| F / Shift + F | **브러시 크기/강도 조절** – **F** 키 드래그로 브러시 크기 조절, **Shift+F** 드래그로 브러시 힘(투영 세기) 조절 ([Weight painting - toggle between Add and Subtract](https://blenderartists.org/t/weight-painting-toggle-between-add-and-subtract/1161121#:~:text=Weight%20painting%20,0.50)). (화면 하단에 원형 게이지 표시) |
-| Ctrl + F | **브러시 Weight 값 조절** – *Ctrl+F* 드래그로 브러시의 Weight 값을 0~1 범위로 변경합니다 ([Key/shortcut to change weight value when weight painting?](https://blender.stackexchange.com/questions/110706/key-shortcut-to-change-weight-value-when-weight-painting#:~:text=Key%2Fshortcut%20to%20change%20weight%20value,maybe%20this%20will%20help%20somebody)) ([Weight painting - toggle between Add and Subtract](https://blenderartists.org/t/weight-painting-toggle-between-add-and-subtract/1161121#:~:text=Weight%20painting%20,0.50)). (0 이하로 내리면 Subtract 모드처럼 작동) |
+| Ctrl + 좌클릭 (Blender < 4.0) <br>Alt + 좌클릭 (Blender ≥ 4.0) | **본 선택 (Weight Paint 중)** – Weight Paint 모드에서 특정 Bone의 가중치를 칠하려면 해당 본을 **선택**해야 합니다. Blender 4.0부터는 *Alt+좌클릭*으로 본 선택 (이전 버전은 *Ctrl+좌클릭*). 선택한 본에 현재 Weight 브러시가 할당됩니다. |
+| F / Shift + F | **브러시 크기/강도 조절** – **F** 키 드래그로 브러시 크기 조절, **Shift+F** 드래그로 브러시 힘(투영 세기) 조절. (화면 하단에 원형 게이지 표시) |
+| Ctrl + F | **브러시 Weight 값 조절** – *Ctrl+F* 드래그로 브러시의 Weight 값을 0~1 범위로 변경합니다. (0 이하로 내리면 Subtract 모드처럼 작동) |
 | 1~0 숫키 | **Weight 값 바로 지정** – 0부터 1까지 10단계 값을 빠르게 선택 (예: 5는 0.5, 0은 1.0). 해당 숫자에 해당하는 Weight로 브러시 강도가 설정됩니다. |
 | Ctrl + Z (Weight) | **Undo** – 페인팅 실수 시 Ctrl+Z로 실행 취소 가능합니다 (기본 편집 모드 Undo와 동일). |
 | Vertex Mask (우측 옵션) | **버텍스 마스크** – Weight Paint 시 편집 모드와 유사하게 특정 버텍스만 선택하여 그 부분만 칠할 수 있는 모드입니다. *Vertex Selection* 아이콘을 눌러 사용. (복잡한 모델의 특정 부위만 가중치 조정할 때 편리) |
@@ -88,14 +84,14 @@ tags: blender
 ### 뷰포트 탐색 (시점 이동/변경)
 | 단축키 | 기능 설명 |
 | --- | --- |
-| 마우스 휠 클릭 드래그 (MMB) | **시점 회전** – 마우스 중간 버튼을 누른 채 드래그하면 3D 뷰를 자유롭게 회전합니 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EB%A7%88%EC%9A%B0%EC%8A%A4%20%ED%9C%A0%20%EB%88%84%EB%A5%B8%20%EC%B1%84%20%EB%93%9C%EB%9E%98%EA%B7%B8%3A,%EC%8B%9C%EC%A0%90%20%ED%9A%8C%EC%A0%84))】. |
-| Shift + MMB 드래그 | **시점 평행 이동** – 시점을 상하좌우로 평행 이동 (팬 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=Ctrl%20%2B%20%EB%A7%88%EC%9A%B0%EC%8A%A4%20%ED%9C%A0%20%EB%88%84%EB%A5%B8,%EC%B1%84%20%EB%93%9C%EB%9E%98%EA%B7%B8%3A%C2%A0%EC%A0%95%EA%B5%90%ED%95%9C%20%EC%A4%8C%EC%9D%B8%2F%EC%A4%8C%EC%95%84%EC%9B%83))】. |
-| 마우스 휠 스크롤 | **줌 인/아웃** – 휠을 굴려 뷰를 확대/축 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EB%A7%88%EC%9A%B0%EC%8A%A4%20%ED%9C%A0%20%EB%88%84%EB%A5%B8%20%EC%B1%84%20%EB%93%9C%EB%9E%98%EA%B7%B8%3A,%EC%8B%9C%EC%A0%90%20%ED%9A%8C%EC%A0%84))】. (또는 Ctrl+MMB 드래그로 천천히 줌 조 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=match%20at%20L216%20Ctrl%20%2B,%ED%9C%A0%20%EB%88%84%EB%A5%B8%20%EC%B1%84%20%EB%93%9C%EB%9E%98%EA%B7%B8%3A%C2%A0%EC%A0%95%EA%B5%90%ED%95%9C%20%EC%A4%8C%EC%9D%B8%2F%EC%A4%8C%EC%95%84%EC%9B%83))】) |
-| Num 1 / 3 / 7 | **정면/측면/상단 뷰** – 넘패드 1: 정면, 3: 오른쪽 측면, 7: 상단 뷰로 시점을 맞춥니 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=%ED%98%84%EC%9E%AC%20%ED%99%94%EB%A9%B4%20%ED%81%AC%EA%B2%8C%20%EB%B3%B4%EA%B8%B0,180%C2%BA%20%EB%B0%98%EB%8C%80%20%EB%B7%B0%20Num%209))】. (Ctrl+1/3/7은 각각 후면/좌측/하단) |
-| Num 5 | **투영 모드 전환** – 원근(Perspective) ↔ 정투상(Orthographic) 뷰 전 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=Front%20View%20Num%201%20Right,5%20Top%20View%20Num%207))】. (원근 감 없이 정확한 투상도로 볼 때 사용) |
-| Num 0 | **카메라 뷰** – 활성 카메라의 시점으로 보 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=%ED%98%84%EC%9E%AC%20%ED%99%94%EB%A9%B4%20%ED%81%AC%EA%B2%8C%20%EB%B3%B4%EA%B8%B0,1%20Right%20View%20Num%203))】. 다시 누르면 일반 뷰로 복귀. |
-| Num . (점) | **선택 객체로 줌** – 현재 선택한 객체나 요소를 뷰 중앙에 꽉 채워 줌 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=%ED%98%84%EC%9E%AC%EC%99%80%20180%C2%BA%20%EB%B0%98%EB%8C%80%20%EB%B7%B0%20Num,isolated%29))】. (찾고자 하는 객체로 빠르게 화면 이동) |
-| Alt + Z | **X-Ray 토글** – 뷰포트를 X-Ray(투과) 모드로 전 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EC%88%AB%EC%9E%90%ED%8C%A8%EB%93%9C%20,3D%20%EB%B7%B0%ED%8F%AC%ED%8A%B8%20%EC%9D%B4%EB%8F%99))】. 메쉬의 뒷면이나 내부의 본 등을 반투명하게 보면서 선택할 수 있습니다. |
+| 마우스 휠 클릭 드래그 (MMB) | **시점 회전** – 마우스 중간 버튼을 누른 채 드래그하면 3D 뷰를 자유롭게 회전합니다. |
+| Shift + MMB 드래그 | **시점 평행 이동** – 시점을 상하좌우로 평행 이동 (팬). |
+| 마우스 휠 스크롤 | **줌 인/아웃** – 휠을 굴려 뷰를 확대/축소. (또는 Ctrl+MMB 드래그로 천천히 줌 조정) |
+| Num 1 / 3 / 7 | **정면/측면/상단 뷰** – 넘패드 1: 정면, 3: 오른쪽 측면, 7: 상단 뷰로 시점을 맞춥니다. (Ctrl+1/3/7은 각각 후면/좌측/하단) |
+| Num 5 | **투영 모드 전환** – 원근(Perspective) ↔ 정투상(Orthographic) 뷰 전환. (원근 감 없이 정확한 투상도로 볼 때 사용) |
+| Num 0 | **카메라 뷰** – 활성 카메라의 시점으로 보기. 다시 누르면 일반 뷰로 복귀. |
+| Num . (점) | **선택 객체로 줌** – 현재 선택한 객체나 요소를 뷰 중앙에 꽉 채워 줌인. (찾고자 하는 객체로 빠르게 화면 이동) |
+| Alt + Z | **X-Ray 토글** – 뷰포트를 X-Ray(투과) 모드로 전환. 메쉬의 뒷면이나 내부의 본 등을 반투명하게 보면서 선택할 수 있습니다. |
 
 > **Note:** 노트북 등에서 넘버패드 없이 숫자 키로 뷰 전환을 하려면 **Emulate Numpad** 옵션을 켜주세요. 단, 이 경우 상단의 1,2,3 키 (버텍스/에지/페이스 모드 전환)는 다른 키로 변경됩니다.
 
@@ -103,39 +99,39 @@ tags: blender
 | 단축키 | 기능 설명 |
 | --- | --- |
 | 좌클릭 (Select) | **오브젝트 선택** – 마우스 좌클릭으로 원하는 오브젝트를 선택합니다. 다중 선택은 Shift+좌클릭. (우클릭 선택 설정 시 반대 버튼 사용) |
-| A / Alt + A | **전체 선택 / 전체 해제** – 오브젝트 모드에서 씬 내 모든 오브젝트 선택 또는 해 ([[블렌더] Blender 블렌더 단축키 & 핵심 정리](https://lioicreim.tistory.com/306#:~:text=,%ED%95%B4%EC%A0%9C%EB%8A%94%20AA%20%EB%98%90%EB%8A%94%20Alt%2BA))】. 편집 모드에서도 전체 요소 선택/해제. |
-| B / C | **박스 선택(B)** / **원형 선택(C)** – 드래그하여 영역 내의 여러 객체 또는 메쉬 요소를 선 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D,%EB%B2%84%ED%85%8D%EC%8A%A4%20%EC%BB%A4%EB%84%A5%ED%8A%B8%20C%20%EC%9B%90%ED%98%95%20%EC%84%A0%ED%83%9D))】. C 사용 시 휠로 브러시 크기 조절, 클릭 드래그로 페인트하듯 선택. |
-| Alt + 좌클릭 (편집) | **루프 선택** – 편집 모드에서 가장 가까운 에지 루프(또는 페이스 루프)를 일괄 선 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EB%A1%9C%EC%BB%AC%EB%B7%B0%3A%C2%A0%2F%20,%EC%9E%91%EC%97%85))】. (Shift+Alt로 다른 루프 추가 선택) |
-| L / Ctrl + L (편집) | **연결된 메쉬 선택** – 편집 모드에서 L 누르면 현재 요소와 이어진 연결 요소 전체를 선 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=3%20%EB%A9%B4%20B%20%EB%B0%95%EC%8A%A4%20%EC%84%A0%ED%83%9D,%EB%B2%84%ED%85%8D%EC%8A%A4%20%EC%BB%A4%EB%84%A5%ED%8A%B8%20C%20%EC%9B%90%ED%98%95%20%EC%84%A0%ED%83%9D))】. Ctrl+L은 선택한 요소와 **연결된 모든 메쉬**를 선택 (예: 별개 오브젝트로 분리되진 않았지만 떨어진 부분 전체) |
+| A / Alt + A | **전체 선택 / 전체 해제** – 오브젝트 모드에서 씬 내 모든 오브젝트 선택 또는 해제. 편집 모드에서도 전체 요소 선택/해제. |
+| B / C | **박스 선택(B)** / **원형 선택(C)** – 드래그하여 영역 내의 여러 객체 또는 메쉬 요소를 선택. C 사용 시 휠로 브러시 크기 조절, 클릭 드래그로 페인트하듯 선택. |
+| Alt + 좌클릭 (편집) | **루프 선택** – 편집 모드에서 가장 가까운 에지 루프(또는 페이스 루프)를 일괄 선택. (Shift+Alt로 다른 루프 추가 선택) |
+| L / Ctrl + L (편집) | **연결된 메쉬 선택** – 편집 모드에서 L 누르면 현재 요소와 이어진 연결 요소 전체를 선택. Ctrl+L은 선택한 요소와 **연결된 모든 메쉬**를 선택 (예: 별개 오브젝트로 분리되진 않았지만 떨어진 부분 전체) |
 | H / Alt + H | **요소 숨기기/표시** – 편집 모드에서 선택한 버텍스/엣지/페이스를 H로 숨기고, Alt+H로 숨긴 모든 요소를 다시 표시합니다. 복잡한 모델 편집 시 유용. |
-| Ctrl + I | **선택 반전** – 편집 모드에서 현재 선택을 반전하여 기존 미선택 요소를 모두 선 ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=K%20%EC%9E%90%EB%A5%B4%EA%B8%B0%20Y%20%EA%B0%99%EC%9D%80%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8,%EC%84%A0%ED%83%9D%20Ctrl%20T%20%EC%82%BC%EA%B0%81%ED%98%95%20%EB%82%98%EB%88%84%EA%B8%B0))】. |
+| Ctrl + I | **선택 반전** – 편집 모드에서 현재 선택을 반전하여 기존 미선택 요소를 모두 선택. |
 | Ctrl + B (오브젝트 모드) | **카메라 경계 상자 선택** – 카메라 뷰에서 Ctrl+B 드래그로 렌더링 영역을 지정하거나, Alt+B로 **클리핑 경계**를 설정해 그 안쪽 부분만 뷰에 표시합니다 (일종의 부분적인 X-Ray 기능). |
 
 > **💡선택 팁:**  
-> - **X-Ray/와이어프레임 활용:** 보이지 않는 후면의 버텍스까지 선택하려면 *X-Ray 모드(Alt+Z)*나 **Wireframe 표시**(Z 키 메뉴)로 전환하세요. 겹쳐있는 요소도 박스 선택으로 한 번에 선택할 수 있습 ([블렌더 유용한 단축키 정리 : 블렌더블로그](https://www.engedi.kr/blender_blog/?bmode=view&idx=15963513#:~:text=%EC%88%AB%EC%9E%90%ED%8C%A8%EB%93%9C%20,3D%20%EB%B7%B0%ED%8F%AC%ED%8A%B8%20%EC%9D%B4%EB%8F%99))3】.  
+> - **X-Ray/와이어프레임 활용:** 보이지 않는 후면의 버텍스까지 선택하려면 *X-Ray 모드(Alt+Z)*나 **Wireframe 표시**(Z 키 메뉴)로 전환하세요. 겹쳐있는 요소도 박스 선택으로 한 번에 선택할 수 있습니다.  
 > - **아웃라이너 활용:** Outliner 패널에서 객체를 클릭해 선택하거나, 눈 아이콘을 눌러 **일시적으로 숨김/표시**함으로써 복잡한 씬에서 원하는 객체만 작업할 수도 있습니다.  
 > - **로컬 모드:** 필요할 때 **넘버패드 /** 를 눌러 선택한 오브젝트만 표시한 상태로 편집하면 주변 방해 요소 없이 집중할 수 있습니다. (다시 누르면 복귀)  
 
 ## 자주 쓰는 모디파이어 및 추천 설정
-Blender의 **모디파이어(Modifier)**는 모델링 작업을 **비파괴적(Non-destructive)**으로 도와주는 강력한 도구입니다. 그 중 특히 **자주 사용하는 모디파이어**와 간단한 활용 팁은 다음과 같습 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=,%EB%B9%A0%EB%A5%B4%EA%B2%8C%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%82%BC%20%EB%95%8C%20%EB%A7%A4%EC%9A%B0%20%EC%9C%A0%EC%9A%A9%ED%95%A9%EB%8B%88%EB%8B%A4))8】:
+Blender의 **모디파이어(Modifier)**는 모델링 작업을 **비파괴적(Non-destructive)**으로 도와주는 강력한 도구입니다. 그 중 특히 **자주 사용하는 모디파이어**와 간단한 활용 팁은 다음과 같습니다:
 
 | 모디파이어 | 설명 및 활용 팁 |
 | --- | --- |
-| **Subdivision Surface** (서브디) | 메쉬의 면을 세분(Subdivide)하여 **부드럽고 매끄러운 형태**를 만들어줍 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=,%EC%98%88%EB%A5%BC%20%EB%93%A4%EC%96%B4%2C%20%EA%B5%AC%EC%B2%B4%EC%97%90))6】. 캐릭터 모델링이나 곡선형 오브젝트에 자주 사용되며, **Ctrl+1/2/3…** 키로 빠르게 추가  ([Subdivision Surface Modifier — Blender Manual](https://docs.blender.org/manual/en/2.81/modeling/modifiers/generate/subdivision_surface.html#:~:text=Subdivision%20Surface%20Modifier%20%E2%80%94%20Blender,Subdivision%20Surface%20modifier%20with))0】. (뷰포트 레벨과 렌더 레벨 설정에 유의) |
-| **Mirror** (미러 대칭) | 오브젝트를 지정한 축으로 **좌우대칭 복제**합 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=%EA%B5%AC%ED%98%95%EC%97%90%20%EA%B0%80%EA%B9%8C%EC%9A%B4%20%EB%A7%A4%EB%81%84%EB%9F%AC%EC%9A%B4%20%ED%98%95%ED%83%9C%EB%A1%9C%20%EB%B3%80%ED%95%A9%EB%8B%88%EB%8B%A4,%EB%B9%A0%EB%A5%B4%EA%B2%8C%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%82%BC%20%EB%95%8C%20%EB%A7%A4%EC%9A%B0%20%EC%9C%A0%EC%9A%A9%ED%95%A9%EB%8B%88%EB%8B%A4))8】. 캐릭터 등 대칭 모델링에 필수로, **Clipping/Merge 옵션**을 켜서 중심에서 메쉬가 이어지도록 설정하 ([[블렌더 기초] 모델링 기초.04 Properties, Modifier](https://tintana4168.tistory.com/25#:~:text=Merge%20%EB%A9%94%EB%89%B4%EB%A5%BC%20%ED%86%B5%ED%95%B4%20%EB%96%A8%EC%96%B4%EC%A7%84%20%EB%91%90,%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C%20%EC%84%9C%EB%A1%9C%20%ED%95%A9%EC%B3%90%EC%A4%84%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4))5】. (오브젝트 Origin이 대칭축 기준이 됩니다.) |
-| **Array** (배열) | 선택한 오브젝트를 **일정 간격으로 반복 복제**합 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=,%EC%98%88%EB%A5%BC%20%EB%93%A4%EC%96%B4%2C%20%EA%B5%AC%EC%B2%B4%EC%97%90))6】. 울타리, 계단처럼 반복 구조물 제작에 유용하며, Count(개수)와 Offset(간격) 등을 조절해 배열을 커스터마이즈 합니다. (합칠 경우 Merge 옵션 활용) |
-| **Boolean** (불리언) | 두 오브젝트를 **합치거나 빼는 연산**을 합니다. 하나의 형태를 다른 형태로 **절삭하거나 결합**하여 복잡한 구조를 빠르게 만들 수 있습 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=%EC%99%84%EC%84%B1%ED%95%98%EB%8A%94%20%EB%8D%B0%20%EC%82%AC%EC%9A%A9%EB%90%A9%EB%8B%88%EB%8B%A4,%EB%B9%A0%EB%A5%B4%EA%B2%8C%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%82%BC%20%EB%95%8C%20%EB%A7%A4%EC%9A%B0%20%EC%9C%A0%EC%9A%A9%ED%95%A9%EB%8B%88%EB%8B%A4))8】. (Difference/Union/Intersect 모드 선택, **겹치는 부분의 폴리곤 수 증가**에 유의) |
-| **Solidify** (두께) | 선택한 얇은 면에 **두께를 추가**하여 입체적인 형태로 만듭 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=%EC%9C%A0%EC%9A%A9%ED%95%98%EA%B2%8C%20%EC%82%AC%EC%9A%A9%ED%95%A0%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4,%EB%95%8C%20%EC%9C%A0%EC%9A%A9%ED%95%98%EA%B2%8C%20%EC%82%AC%EC%9A%A9%ED%95%A0%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4))0】. 예를 들어 평면으로 된 벽이나 종이에 Solidify를 적용해 벽두께를 줄 수 있으며, *Thickness* 수치로 두께 조절. (균일 두께 유지 옵션: Even Thickness 등 활용) |
+| **Subdivision Surface** (서브디) | 메쉬의 면을 세분(Subdivide)하여 **부드럽고 매끄러운 형태**를 만들어줍니다. 캐릭터 모델링이나 곡선형 오브젝트에 자주 사용되며, **Ctrl+1/2/3…** 키로 빠르게 추가 가능. (뷰포트 레벨과 렌더 레벨 설정에 유의) |
+| **Mirror** (미러 대칭) | 오브젝트를 지정한 축으로 **좌우대칭 복제**합니다. 캐릭터 등 대칭 모델링에 필수로, **Clipping/Merge 옵션**을 켜서 중심에서 메쉬가 이어지도록 설정하세요. (오브젝트 Origin이 대칭축 기준이 됩니다.) |
+| **Array** (배열) | 선택한 오브젝트를 **일정 간격으로 반복 복제**합니다. 울타리, 계단처럼 반복 구조물 제작에 유용하며, Count(개수)와 Offset(간격) 등을 조절해 배열을 커스터마이즈 합니다. (합칠 경우 Merge 옵션 활용) |
+| **Boolean** (불리언) | 두 오브젝트를 **합치거나 빼는 연산**을 합니다. 하나의 형태를 다른 형태로 **절삭하거나 결합**하여 복잡한 구조를 빠르게 만들 수 있습니다. (Difference/Union/Intersect 모드 선택, **겹치는 부분의 폴리곤 수 증가**에 유의) |
+| **Solidify** (두께) | 선택한 얇은 면에 **두께를 추가**하여 입체적인 형태로 만듭니다. 예를 들어 평면으로 된 벽이나 종이에 Solidify를 적용해 벽두께를 줄 수 있으며, *Thickness* 수치로 두께 조절. (균일 두께 유지 옵션: Even Thickness 등 활용) |
 
-> **모디파이어 사용 팁:** 여러 모디파이어를 **동시에 조합**하여 사용할 수 있습니다. 예를 들어 **Mirror + Subdivision**으로 대칭이면서도 부드러운 캐릭터 모델을 만들거나, **Array + Boolean**으로 반복 패턴에 규칙적인 구멍을 뚫는 등의 활용이 가능합 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=3))6】. 모디파이어 적용 순서는 결과에 영향을 미치므로 **스택 순서**를 잘 조정하세요.
+> **모디파이어 사용 팁:** 여러 모디파이어를 **동시에 조합**하여 사용할 수 있습니다. 예를 들어 **Mirror + Subdivision**으로 대칭이면서도 부드러운 캐릭터 모델을 만들거나, **Array + Boolean**으로 반복 패턴에 규칙적인 구멍을 뚫는 등의 활용이 가능합니다. 모디파이어 적용 순서는 결과에 영향을 미치므로 **스택 순서**를 잘 조정하세요.
 
 ## 모델링/리깅 작업 전환 팁
 복잡한 프로젝트에서는 **모델링 작업**과 **리깅/포징 작업**을 수시로 오가게 됩니다. 아래 팁들은 이 과정에서 시간을 절약하고 워크플로우를 향상시켜 줍니다:
 
-- **작업 공간(Workspace) 활용:** Blender의 상단 **워크스페이스 탭**을 사용하여 Modeling, Rigging/Animation 등의 레이아웃을 미리 구성해두고 클릭 한 번으로 전환할 수 있습니다. 기본 단축키로는 `Ctrl + PageUp/PageDown`으로 이전/다음 작업 공간으로 이동이 가능합 ([Workspaces — Blender Manual](https://docs.blender.org/manual/en/2.93/interface/window_system/workspaces.html#:~:text=Tabs))9】. 예를 들어 모델링 작업 후 애니메이션 Workspace로 넘겨 바로 포징을 시도해볼 수 있습니다.  
-- **모드 빠르게 전환:** Edit 모드에서 **오브젝트 모드**로, 또는 **포즈 모드**로 빠르게 전환하려면 필요한 객체를 선택한 후 `Ctrl + Tab` 키로 **모드 전환 파이 메뉴**를 사용할 수 있습 ([Object Modes - Blender 4.4 Manual](https://docs.blender.org/manual/en/latest/editors/3dview/modes.html#:~:text=Object%20Modes%20,object%20is%20an%20Armature%2C))5】. 여기서 바로 Pose, Weight Paint 등을 선택하거나, 단일 Armature의 경우 *Ctrl+Tab*으로 곧바로 Pose Mode에 들어갈 수도 있습니다. (단축키 설정에서 Tab 키를 Pie Menu로 설정하면 Tab으로도 모드 전환 메뉴 호출 가능)  
+- **작업 공간(Workspace) 활용:** Blender의 상단 **워크스페이스 탭**을 사용하여 Modeling, Rigging/Animation 등의 레이아웃을 미리 구성해두고 클릭 한 번으로 전환할 수 있습니다. 기본 단축키로는 `Ctrl + PageUp/PageDown`으로 이전/다음 작업 공간으로 이동이 가능합니다. 예를 들어 모델링 작업 후 애니메이션 Workspace로 넘겨 바로 포징을 시도해볼 수 있습니다.  
+- **모드 빠르게 전환:** Edit 모드에서 **오브젝트 모드**로, 또는 **포즈 모드**로 빠르게 전환하려면 필요한 객체를 선택한 후 `Ctrl + Tab` 키로 **모드 전환 파이 메뉴**를 사용할 수 있습니다. 여기서 바로 Pose, Weight Paint 등을 선택하거나, 단일 Armature의 경우 *Ctrl+Tab*으로 곧바로 Pose Mode에 들어갈 수도 있습니다. (단축키 설정에서 Tab 키를 Pie Menu로 설정하면 Tab으로도 모드 전환 메뉴 호출 가능)  
 - **동시에 편집 및 포즈 조정:** **Lock Object Modes** 옵션을 비활성화하면 하나의 오브젝트가 Edit/Weight Paint 모드에 있을 때도 다른 오브젝트를 선택하여 모드를 다르게 둘 수 있습니다. 이를 활용해 **메시는 Weight Paint 모드**, **본은 Pose 모드**로 두고 본을 움직여가며 페인팅이 가능합니다. 메쉬를 편집해야 할 경우 일시적으로 Pose 모드를 Object로 돌린 뒤 메쉬 Edit 모드로 들어가 수정하고 다시 Pose 모드로 돌아오는 식으로 작업합니다.  
 - **단축키 커스터마이즈:** 본인이 자주 쓰는 모드 전환이나 기능이 있다면 **Edit > Preferences > Keymap**에서 단축키를 커스터마이즈하세요. 예를 들어 *Weight Paint 모드 직접 진입*이나 *Pose <-> Edit 토글* 등을 사용자 지정 단축키로 등록하면 더욱 빠르게 전환할 수 있습니다.  
 - **작업 분리와 미리보기:** 모델링 중간중간 **Skeleton(본) 테스트**를 위해 임시로 메쉬를 본에 부모 설정하여 포징해보고, 문제가 있으면 **즉시 편집 모드로 돌아가 수정**하는 식으로 반복합니다. 이때 **별도의 파일로 본 리깅 테스트**를 하거나, **컬렉션**으로 메쉬/본 표시를 토글하여 필요 시에만 본을 활성화하는 등 작업을 구분지으면 편리합니다. 또한 **Mesh Deform, Shape Key** 등 고급 기능은 리깅 전에 미리 고려해두면 이후 전환 작업을 줄일 수 있습니다.
 
-각종 단축키와 모디파이어를 효율적으로 활용하면 모델링과 리깅 작업을 번갈아 수행할 때 생기는 단절을 최소화하고, **보다 빠르고 유연한 워크플로우**를 구축할 수 있습니다. 필요한 때에 이 치트시트를 참고하여 생산성을 높여보세 ([블렌더 모디파이어 가이드: 창의적 작업을 위한 필수 도구](https://choismart.tistory.com/225#:~:text=,%EB%B9%A0%EB%A5%B4%EA%B2%8C%20%EB%A7%8C%EB%93%A4%EC%96%B4%EB%82%BC%20%EB%95%8C%20%EB%A7%A4%EC%9A%B0%20%EC%9C%A0%EC%9A%A9%ED%95%A9%EB%8B%88%EB%8B%A4)) ([블렌더(Blender) 핵심 단축키 : Blog | 인바이즈 INVAIZ](https://www.invaiz.com/blog/?bmode=view&idx=12576491&srsltid=AfmBOop6XkRN-knJuGpWbKlTk1LOacoHErMRsDkLlKsasDaGTfN-Pf_b#:~:text=%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%20Ctrl%20Tab%20%ED%8F%AC%EC%A6%88%20%EB%AA%A8%EB%93%9C,%EC%B6%94%EA%B0%80%20Alt%20K%20%ED%82%A4%EC%9E%89%20%EC%A0%9C%EA%B1%B0))3】
+각종 단축키와 모디파이어를 효율적으로 활용하면 모델링과 리깅 작업을 번갈아 수행할 때 생기는 단절을 최소화하고, **보다 빠르고 유연한 워크플로우**를 구축할 수 있습니다. 필요한 때에 이 치트시트를 참고하여 생산성을 높여보세요!
