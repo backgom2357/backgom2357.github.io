@@ -21,6 +21,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dearminor.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
 github_username:  "Diominor"
+author: "Seungyeol Baek"
+social:
+  name: "Seungyeol Baek"
+  links:
+    - https://www.facebook.com/The.Back.I.Am
+    - https://github.com/backgom2357
 
 # Build settings
 markdown: kramdown
@@ -28,6 +34,7 @@ theme:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
